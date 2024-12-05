@@ -1,3 +1,3 @@
 # IRNIYANTRAC Resource Hierarchy
 
-![alt text](images/image.png)
+![irniyantrac resource hierarchy](images/image.png)

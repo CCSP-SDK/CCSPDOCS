@@ -1,17 +1,37 @@
 site_name: CCSP docs
+
+extra_css:
+  - css/styles.css
+
+extra_javascript:
+  - js/script.js
+
 theme:
+
   name: material
+
   features:
-    - navigation.tabs
+    - content.code.annotate
+    - content.code.copy
+    #- navigation.footer
+    - content.footnote.tooltips
+    - navigation.indexes
+    - navigation.instant.progress
+    - navigation.prune
     - navigation.sections
-    - toc.integrate
-    - navigation.top
+    - navigation.tabs
+    - navigation.tabs.sticky
     - search.suggest
     - search.highlight
-    - content.tabs.link
-    - content.code.annotation
-    - content.code.copy
+    - search.share
+    #- toc.integrate
+
   language: en
+
+  options:
+      navigation_depth: 4  #adjust depth of the navigation
+      toc: true 
+
   palette:
     - scheme: default
       toggle:
@@ -24,7 +44,7 @@ theme:
         icon: material/toggle-switch
         name: Switch to light mode    
       primary: teal
-      accent: lime
+      accent: lime  
 
 plugins:
   - search
@@ -33,6 +53,7 @@ plugins:
 
 markdown_extensions:
   - pymdownx.highlight:
+      linenums: true
       anchor_linenums: true
   - pymdownx.inlinehilite
   - pymdownx.snippets
@@ -53,14 +74,53 @@ copyright: |
 nav:
   - Home: 
     - 'index.md'
-  - IRNIYANTRAC:
+  - About IRNIYANTRAC:
     - 'irniyantrac/index.md'
     - An Introduction to IRNIYANTRAC: 'irniyantrac/irniyantracIntroduction.md'
-    -  IRNIYANTRAC onboarding steps: 'irniyantrac/irniyantracOnboarding.md'
-    -  IRNIYANTRAC Resource Hierarchy: 'irniyantrac/irniyantracResourceHierarchy.md'
-    -  IRNIYANTRAC Messages:
-        - Resource Hierarchy Creation: 'irniyantrac/irniyantracMsgs/irniyantracResourceHierarchyCreation.md'  
-        - Monitoring Messages: 'irniyantrac/irniyantracMsgs/irniyantracMonitoringMessages.md'
-        - Control commands:   'irniyantrac/irniyantracMsgs/irniyantracControlMessages.md'  
-    -  IRNIYANTRAC Common Errors and Resolution: 'irniyantrac/irniyantracCommonErrors.md'    
-  
+    - IRNIYANTRAC onboarding steps: 'irniyantrac/irniyantracOnboarding.md'
+    - IRNIYANTRAC Resource Hierarchy: 'irniyantrac/irniyantracResourceHierarchy.md'
+    - Resource Hierarchy Creation: 'irniyantrac/irniyantracResourceHierarchyCreation.md'  
+  - IRNIYANTRAC Messages:
+    - 'irniyantracMsgs/index.md'
+    - Monitoring Messages: 
+        - 'irniyantracMsgs/irniyantracMntrngMsgs/index.md'
+        # - Monitoring Container: 'irniyantracMsgs/irniyantracMntrngMsgs/connectTimeSync.md'
+        # - Monitoring Container Subscription: 'wgpsMessages.md'
+        # - Monitoring Buffer Container: 'wgpsMessages.md'
+        # - Monitoring Buffer Container Subscription: 'wgpsMessages.md'
+        # - Alert Container: 'wgpsMessages.md'
+        # - Alert Container Subscription: 'wgpsMessages.md'
+        # - Alert Buffer Container: 'wgpsMessages.md'
+        # - Alert Buffer Container Subscription: 'wgpsMessages.md'
+        # - Acknowledgement Container: 'wgpsMessages.md'
+        # - Acknowledgement Container Subscription: 'wgpsMessages.md'
+        # - Acknowledgement Buffer Container: 'wgpsMessages.md'
+        # - Acknowledgement Buffer Container Subscription: 'wgpsMessages.md'
+        # - Device Connect Container: 'wgpsMessages.md'
+        # - Device Connect Container Subscription: 'wgpsMessages.md'
+    - Control Notifications:   
+        - 'irniyantracMsgs/irniyantracCtrlNtfcns/index.md'
+        # - Connect Time/Sync: 'irniyantracMsgs/irniyantracCtrlNtfcns/connectTimeSync.md'
+        # - Connect Time/Sync Ack: 'irniyantracMsgs/irniyantracCtrlNtfcns/connectTimeSyncAck.md'
+        # - Connect Time/Sync Ack Response: 'irniyantracMsgs/irniyantracCtrlNtfcns/connectTimeSyncAckResponse.md'
+        # - Monitoring: 'irniyantracMsgs/irniyantracCtrlNtfcns/monitoring.md'
+        # - External Device Monitoring: 'irniyantracMsgs/irniyantracCtrlNtfcns/externalDeviceMonitoring.md'
+        # - Sensor Values Monitoring: 'irniyantracMsgs/irniyantracCtrlNtfcns/sensorValuesMonitoring.md'
+        # - Alerts: 'irniyantracMsgs/irniyantracCtrlNtfcns/alerts.md'
+        # - Control Publish Operation: 'irniyantracMsgs/irniyantracCtrlNtfcns/controlPublishOperation.md'
+        # - Control Subscribe Ack: 'irniyantracMsgs/irniyantracCtrlNtfcns/controlSubscribeAck.md'
+        # - Control Publish Sensor Calibration: 'irniyantracMsgs/irniyantracCtrlNtfcns/controlPublishSensorCalibration.md'
+        # - Schedule Publish: 'irniyantracMsgs/irniyantracCtrlNtfcns/schedulePublish.md'
+        # - Schedule Publish Response: 'irniyantracMsgs/irniyantracCtrlNtfcns/schedulePublishResponse.md'
+        # - Schedule Executed: 'irniyantracMsgs/irniyantracCtrlNtfcns/scheduleExecuted.md'
+        # - Reset Schedule: 'irniyantracMsgs/irniyantracCtrlNtfcns/resetSchedule.md'
+        # - Reset Schedule Acknowledgement: 'irniyantracMsgs/irniyantracCtrlNtfcns/resetScheduleAcknowledge.md'
+        # - Get Existing Schedule List: 'irniyantracMsgs/irniyantracCtrlNtfcns/getExistingScheduleList.md'
+        # - Get Existing Schedule List Response: 'irniyantracMsgs/irniyantracCtrlNtfcns/getExistingScheduleListResponse.md'
+        # - Publish Rule: 'irniyantracMsgs/irniyantracCtrlNtfcns/publishRule.md'
+        # - Rule Executed Response: 'irniyantracMsgs/irniyantracCtrlNtfcns/ruleExecutedResponse.md'
+        # - Reset Rule: 'irniyantracMsgs/irniyantracCtrlNtfcns/resetRule.md'
+    - IRNIYANTRAC Common Errors and Resolution: 'irniyantracMsgs/irniyantracCommonErrors.md'  
+  - PayLoad Details:
+    - 'payloadDetails/index.md'
+    - Messages: 'wgpsMessages.md'  
