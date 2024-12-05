@@ -82,7 +82,7 @@ nav:
     - Resource Hierarchy Creation: 'irniyantrac/irniyantracResourceHierarchyCreation.md'  
   - IRNIYANTRAC Messages:
     - 'irniyantracMsgs/index.md'
-    - Monitoring Messages: 
+    - IFD Message Payloads: 
         - 'irniyantracMsgs/irniyantracMntrngMsgs/index.md'
         # - Monitoring Container: 'irniyantracMsgs/irniyantracMntrngMsgs/connectTimeSync.md'
         # - Monitoring Container Subscription: 'wgpsMessages.md'
@@ -98,7 +98,12 @@ nav:
         # - Acknowledgement Buffer Container Subscription: 'wgpsMessages.md'
         # - Device Connect Container: 'wgpsMessages.md'
         # - Device Connect Container Subscription: 'wgpsMessages.md'
-    - Control Notifications:   
+    - Cloud/Irniyantrac Notification Payloads:
+      - 'irniyantracMsgs/irniyantracMntrngMsgs/index.md'
+        # - Monitoring Container: 'irniyantracMsgs/irniyantracMntrngMsgs/connectTimeSync.md'
+        # - Monitoring Container Subscription: 'wgpsMessages.md'
+        # - Monitoring Buffer Container: 'wgpsMessages.md'
+    - Containers and Subscriptions Payloads:   
         - 'irniyantracMsgs/irniyantracCtrlNtfcns/index.md'
         # - Connect Time/Sync: 'irniyantracMsgs/irniyantracCtrlNtfcns/connectTimeSync.md'
         # - Connect Time/Sync Ack: 'irniyantracMsgs/irniyantracCtrlNtfcns/connectTimeSyncAck.md'
