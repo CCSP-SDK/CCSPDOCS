@@ -74,12 +74,13 @@ copyright: |
 nav:
   - Home: 
     - 'index.md'
-  - About IR-NIYANTRAC:
-    - 'irniyantrac/index.md'
-    - An Introduction to IR-NIYANTRAC: 'irniyantrac/irniyantracIntroduction.md'
-    - IR-NIYANTRAC onboarding steps: 'irniyantrac/irniyantracOnboarding.md'
-    - IR-NIYANTRAC Resource Hierarchy: 'irniyantrac/irniyantracResourceHierarchy.md'
-    - IR-NIYANTRAC Message Communication Flow: 'irniyantrac/irniyantracMessageCommunicationFlow.md'  
+    - About CCSP: 'irniyantrac/ccsp.md'
+    - About IR-NIYANTRAC:  
+      - 'irniyantrac/index.md'
+    # - An Introduction to IR-NIYANTRAC: 'irniyantrac/irniyantracIntroduction.md'
+    - IR-NIYANTRAC Onboarding: 'irniyantrac/irniyantracOnboarding.md'
+    # - IR-NIYANTRAC Resource Hierarchy: 'irniyantrac/irniyantracResourceHierarchy.md'
+    # - IR-NIYANTRAC Message Communication Flow: 'irniyantrac/irniyantracMessageCommunicationFlow.md'  
   - IR-NIYANTRAC Messages:
     - 'irniyantracMessages/index.md'
     - Containers and Subscriptions Payloads:   
