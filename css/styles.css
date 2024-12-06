@@ -1,21 +1,8 @@
-/* Hide Payload Details by default */
-nav .nav-link-payload {
-  display: none;
+a {
+  color: blue !important;
+}
+a:visited {
+  color: purple !important;
 }
 
-/* Show Payload Details when IRNIYANTRAC Messages is active */
-nav .nav-link-IRNIYANTRAC.active + .nav-link-payload {
-  display: block;
-  position: absolute;
-  right: 0;
-  top: 0;
-  z-index: 9999; /* Ensure it's on top of other sections */
-}
 
-/* Optional: Styling to make Payload Details look nice */
-nav .nav-link-payload {
-  padding: 10px;
-  background-color: #f4f4f4;
-  border-left: 2px solid #ccc;
-  display: none; /* Hide by default */
-}
