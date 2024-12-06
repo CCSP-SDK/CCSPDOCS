@@ -37,7 +37,7 @@
 ```
 
 ```
-## Alerts Payload Response with Sample Values:
+## Payload with Sample Values:
 ```
 
 ```json
@@ -153,7 +153,7 @@
 ```
 
 ```
-## Connect Time/Sync Payload with Sample Values:
+## Payload with Sample Values:
 ```
 
 ```json
@@ -518,7 +518,7 @@
 ```
 
 ```
-## Get Existing Schedule List Response Payload with Sample Values:
+## Payload with Sample Values:
 ```
 
 ```json
@@ -673,7 +673,7 @@
 ```
 
 ```
-Payload with Sample Values
+## Payload with Sample Values
 ```
 
 ```json
@@ -826,7 +826,7 @@ Payload with Sample Values
 ```
 
 ```
-## Schedule Executed Response with Sample Values:
+## Payload with Sample Values:
 ```
 
 ```json
@@ -944,7 +944,7 @@ Payload with Sample Values
 ```
 
 ```
-## Schedule Publish Response with Sample Values:
+## Payload with Sample Values:
 ```
 
 ```json

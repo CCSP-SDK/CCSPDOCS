@@ -79,7 +79,7 @@ nav:
     - An Introduction to IR-NIYANTRAC: 'irniyantrac/irniyantracIntroduction.md'
     - IR-NIYANTRAC onboarding steps: 'irniyantrac/irniyantracOnboarding.md'
     - IR-NIYANTRAC Resource Hierarchy: 'irniyantrac/irniyantracResourceHierarchy.md'
-    - Resource Hierarchy Creation: 'irniyantrac/irniyantracResourceHierarchyCreation.md'  
+    - IR-NIYANTRAC Message Communication Flow: 'irniyantrac/irniyantracMessageCommunicationFlow.md'  
   - IR-NIYANTRAC Messages:
     - 'irniyantracMessages/index.md'
     - Containers and Subscriptions Payloads:   
@@ -122,7 +122,8 @@ nav:
         # - Publish Rule: 'irniyantracMessages/cloudIrniyantracNotificationPayloads/publishRule.md'
         # - Rule Executed Response: 'irniyantracMessages/cloudIrniyantracNotificationPayloads/ruleExecutedResponse.md'
         # - Reset Rule: 'irniyantracMessages/cloudIrniyantracNotificationPayloads/resetRule.md'
-    - IR-NIYANTRAC Common Errors and Resolution: 'irniyantracMessages/irniyantracCommonErrorsResolutions/index.md'  
+    - IR-NIYANTRAC Common Errors and Resolution: 
+        - 'irniyantracMessages/irniyantracCommonErrorsResolutions/index.md'  
   - PayLoad Details:
     - 'payloadDetails/index.md'
     - Messages: 'wgpsMessages.md'  

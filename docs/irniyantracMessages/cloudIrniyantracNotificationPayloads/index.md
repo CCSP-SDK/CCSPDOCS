@@ -32,7 +32,7 @@
 ```
 
 ```
-## Connect Time/Sync Ack Payload with Sample Values:
+## Payload with Sample Values:
 ```
 
 ```json
@@ -134,7 +134,7 @@
 ```
 
 ```
-## Connect Time/Sync Ack Response Payload with Sample Values:
+## Payload with Sample Values:
 ```
 
 ```json
@@ -255,7 +255,7 @@
 ```
 
 ```
-## Sensor Values Monitoring Response with Sample Values:
+## Payload with Sample Values:
 ```
 
 ```json
@@ -610,7 +610,7 @@
 ```
 
 ```
-## Schedule Publish Response with Sample Values:
+## Payload with Sample Values:
 ```
 
 ```json
@@ -726,7 +726,7 @@
 ```
 
 ```
-## Reset Schedule Payload with Sample Values:
+## Payload with Sample Values:
 ```
 
 ```json
@@ -840,7 +840,7 @@
 ```
 
 ```
-## Reset Schedule Acknowledgement Payload with Sample Values:
+## Payload with Sample Values:
 ```
 
 ```json
@@ -959,7 +959,7 @@
 ```
 
 ```
-## Get Existing Schedule List Payload with Sample Values:
+## Payload with Sample Values:
 ```
 
 ```json
@@ -1079,7 +1079,7 @@
 ```
 
 ```
-## Publish Rule Payload with Sample Values:
+## Payload with Sample Values:
 ```
 
 ```json
@@ -1198,7 +1198,7 @@
 ```
 
 ```
-## Rule Executed Response with Sample Values:
+## Payload with Sample Values:
 ```
 
 ```json
@@ -1315,7 +1315,7 @@
 ```
 
 ```
-## Reset Rule Payload with Sample Values:
+## Payload with Sample Values:
 ```
 
 ```json

@@ -1,3 +1,3 @@
 # IRNIYANTRAC Resource Hierarchy
 
-![irniyantrac resource hierarchy](images/image.png)
+![irniyantrac resource hierarchy](images/ccsp_docs.png)
