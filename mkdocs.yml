@@ -74,11 +74,13 @@ copyright: |
 nav:
   - Home: 
     - 'index.md'
-    - About CCSP: 'irniyantrac/ccsp.md'
+    - About CCSP: 
+      - 'irniyantrac/ccsp/index.md'
     - About IR-NIYANTRAC:  
       - 'irniyantrac/index.md'
     # - An Introduction to IR-NIYANTRAC: 'irniyantrac/irniyantracIntroduction.md'
-    - IR-NIYANTRAC Onboarding: 'irniyantrac/irniyantracOnboarding.md'
+    - IR-NIYANTRAC Onboarding: 
+      - 'irniyantrac/onboarding/index.md'
     # - IR-NIYANTRAC Resource Hierarchy: 'irniyantrac/irniyantracResourceHierarchy.md'
     # - IR-NIYANTRAC Message Communication Flow: 'irniyantrac/irniyantracMessageCommunicationFlow.md'  
   - IR-NIYANTRAC Messages:
@@ -125,6 +127,6 @@ nav:
         # - Reset Rule: 'irniyantracMessages/cloudIrniyantracNotificationPayloads/resetRule.md'
     - IR-NIYANTRAC Common Errors and Resolution: 
         - 'irniyantracMessages/irniyantracCommonErrorsResolutions/index.md'  
-  - PayLoad Details:
-    - 'payloadDetails/index.md'
-    - Messages: 'wgpsMessages.md'  
+  # - PayLoad Details:
+  #   - 'payloadDetails/index.md'
+  #   - Messages: 'wgpsMessages.md'  
