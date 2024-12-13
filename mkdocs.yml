@@ -1,19 +1,28 @@
 site_name: IR-NIYANTRAC (Indian Railways Native IoT based Yield Analysis Telemetry, Recording and Control) Guide
 
+# this for removing the copyright of mkdocs material theme in footer
+extra:
+  generator: false
+
 extra_css:
   - css/styles.css
 
 extra_javascript:
   - js/script.js
 
+
 theme:
 
   name: material
 
+  # custom_dir: 'overrides'            # //not working
+
+  logo: 'images/cdot_logo.png'
+
   features:
-    - content.code.annotate
+    - content.code.annotate 
     - content.code.copy
-    #- navigation.footer
+    # - navigation.footer             # //this for removal of horizontal navigation at footer
     - content.footnote.tooltips
     - navigation.indexes
     - navigation.instant.progress
@@ -24,13 +33,10 @@ theme:
     - search.suggest
     - search.highlight
     - search.share
-    #- toc.integrate
+    # - toc.integrate                # //this for getting toc 
 
   language: en
 
-  options:
-      navigation_depth: 4  #adjust depth of the navigation
-      toc: true 
 
   palette:
     - scheme: default
@@ -46,9 +52,9 @@ theme:
       primary: teal
       accent: lime  
 
+
 plugins:
   - search
-
 
 
 markdown_extensions:
@@ -68,7 +74,7 @@ markdown_extensions:
 
 
 copyright: |
-  &copy; 2024 <a href="https://github.com/pootrivs"  target="_blank" rel="noopener">Poornima Shandilya</a>
+  &copy; 2024 <a href="https://github.com/pootrivs"  target="_blank" rel="noopener">Centre for Development of Telematics</a>
 
 
 nav:
@@ -78,16 +84,73 @@ nav:
       - 'irniyantrac/ccsp/index.md'
     - About IR-NIYANTRAC:  
       - 'irniyantrac/index.md'
-    # - An Introduction to IR-NIYANTRAC: 'irniyantrac/irniyantracIntroduction.md'
     - IR-NIYANTRAC Onboarding: 
       - 'irniyantrac/onboarding/index.md'
-    # - IR-NIYANTRAC Resource Hierarchy: 'irniyantrac/irniyantracResourceHierarchy.md'
-    # - IR-NIYANTRAC Message Communication Flow: 'irniyantrac/irniyantracMessageCommunicationFlow.md'  
+    - OneM2M-AppId Registration:
+      - 'irniyantrac/OneM2MAppIdRegistration/index.md' 
   - IR-NIYANTRAC Messages:
     - 'irniyantracMessages/index.md'
     - Containers and Subscriptions Payloads:   
         - 'irniyantracMessages/containersAndSubscriptionsPayloads/index.md'
-        # - Monitoring Container: 'irniyantracMessages/containersAndSubscriptionsPayloads/index.md'
+    - IFD Message Payloads: 
+        - 'irniyantracMessages/ifdMessagePayloads/index.md'
+    - Cloud/IR-NIYANTRAC Notification Payloads:
+        - 'irniyantracMessages/cloudIrniyantracNotificationPayloads/index.md'
+    - IR-NIYANTRAC Common Errors and Resolution: 
+        - 'irniyantracMessages/irniyantracCommonErrorsResolutions/index.md'  
+  - Useful Vedios:
+    - 'usefulVedios/index.md'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+##################################################################################
+
+
+# - Monitoring Container: 'irniyantracMessages/containersAndSubscriptionsPayloads/index.md'
         # - Monitoring Container Subscription: 'irniyantracMessages/containersAndSubscriptionsPayloads/index.md'
         # - Monitoring Buffer Container: 'irniyantracMessages/containersAndSubscriptionsPayloads/index.md'
         # - Monitoring Buffer Container Subscription: 'irniyantracMessages/containersAndSubscriptionsPayloads/index.md'
@@ -101,9 +164,11 @@ nav:
         # - Acknowledgement Buffer Container Subscription: 'irniyantracMessages/containersAndSubscriptionsPayloads/index.md'
         # - Device Connect Container: 'irniyantracMessages/containersAndSubscriptionsPayloads/index.md'
         # - Device Connect Container Subscription: 'irniyantracMessages/containersAndSubscriptionsPayloads/index.md'
-    - IFD Message Payloads: 
-        - 'irniyantracMessages/ifdMessagePayloads/index.md'
-        # - Alerts: 'irniyantracMessages/ifdMessagePayloads/alerts.md'
+
+
+
+
+# - Alerts: 'irniyantracMessages/ifdMessagePayloads/alerts.md'
         # - Connect Time/Sync: 'irniyantracMessages/ifdMessagePayloads/connectTimeSync.md'
         # - Control Subscribe Ack: 'irniyantracMessages/ifdMessagePayloads/controlSubscribeAck.md'
         # - External Device Monitoring: 'irniyantracMessages/ifdMessagePayloads/externalDeviceMonitoring.md'
@@ -111,9 +176,10 @@ nav:
         # - Monitoring: 'irniyantracMessages/ifdMessagePayloads/monitoring.md'
         # - Schedule Executed: 'irniyantracMessages/ifdMessagePayloads/scheduleExecuted.md'
         # - Schedule Publish Response: 'irniyantracMessages/ifdMessagePayloads/schedulePublishResponse.md'
-    - Cloud/IR-NIYANTRAC Notification Payloads:
-        - 'irniyantracMessages/cloudIrniyantracNotificationPayloads/index.md'
-        # - Connect Time/Sync Ack: 'irniyantracMessages/cloudIrniyantracNotificationPayloads/connectTimeSyncAck.md'
+
+
+
+# - Connect Time/Sync Ack: 'irniyantracMessages/cloudIrniyantracNotificationPayloads/connectTimeSyncAck.md'
         # - Connect Time/Sync Ack Response: 'irniyantracMessages/cloudIrniyantracNotificationPayloads/connectTimeSyncAckResponse.md'
         # - Sensor Values Monitoring: 'irniyantracMessages/cloudIrniyantracNotificationPayloads/sensorValuesMonitoring.md'
         # - Control Publish Operation: 'irniyantracMessages/cloudIrniyantracNotificationPayloads/controlPublishOperation.md'
@@ -125,8 +191,8 @@ nav:
         # - Publish Rule: 'irniyantracMessages/cloudIrniyantracNotificationPayloads/publishRule.md'
         # - Rule Executed Response: 'irniyantracMessages/cloudIrniyantracNotificationPayloads/ruleExecutedResponse.md'
         # - Reset Rule: 'irniyantracMessages/cloudIrniyantracNotificationPayloads/resetRule.md'
-    - IR-NIYANTRAC Common Errors and Resolution: 
-        - 'irniyantracMessages/irniyantracCommonErrorsResolutions/index.md'  
-  # - PayLoad Details:
-  #   - 'payloadDetails/index.md'
-  #   - Messages: 'wgpsMessages.md'  
+
+
+###################################################################################
+
+

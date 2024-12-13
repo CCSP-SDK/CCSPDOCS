@@ -5,4 +5,89 @@ a:visited {
   color: purple !important;
 }
 
+.md-header__button.md-logo {
+  display: flex; /*make the container a flexbox*/
+  align-items: center; /*vertically center the logos*/
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  margin-right: -30px;
+  margin-left:-100px;
+}
 
+.md-header__button.md-logo img,
+.md-header__button.md-logo svg {
+  height: 35%; /*adjust size of your first logo */
+  width: 35%;
+}
+
+.md-header__button.md-logo::after {
+  content: '';
+  background-image: url('../images/ccsp_logo.png'); /*path to your second image */
+  background-size: contain; 
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 70px;  /*adjust size of your second logo */
+  height: 50px;  /*adjust size of your second logo */
+  margin-left: 10px;  /*space between the logos */
+  margin-right: -25px;
+}
+
+
+/* For smaller screens (phones and tablets) */
+@media (max-width: 768px) {
+  /* Stack the logos and adjust sizes */
+  .md-header__button.md-logo {
+      flex-direction: column; /* Stack logos vertically */
+      align-items: flex-start; /* Align logos to the left */
+      padding: 10px;
+  }
+
+  .md-header__button.md-logo img {
+      height: 50px; /* Adjust logo size for better visibility */
+      width: auto;
+      margin-bottom: 5px; /* Add spacing between stacked logos */
+  }
+
+  /* Adjust the navigation bar for smaller screens */
+  .md-nav {
+      display: flex;
+      flex-direction: column; /* Stack nav items vertically */
+      align-items: flex-start;
+      padding: 10px;
+  }
+
+  /* Adjust the site name to fit on smaller screens */
+  .md-header__title {
+      font-size: 16px; /* Reduce font size */
+      white-space: nowrap; /* Prevent wrapping */
+      overflow: hidden;
+      text-overflow: ellipsis; /* Add ellipsis if text overflows */
+  }
+}
+
+/* For very small screens (phones in portrait mode) */
+@media (max-width: 480px) {
+  .md-header__button.md-logo {
+      padding: 5px;
+  }
+
+  .md-header__button.md-logo img {
+      height: 40px;
+  }
+
+  .md-header__title {
+      font-size: 14px;
+  }
+
+  .md-nav {
+      padding: 5px;
+  }
+
+  /* Make search box and toggle icon fit */
+  .md-header__search, .md-header__button.md-icon {
+      flex-shrink: 0; /* Prevent shrinking */
+      margin-left: auto; /* Push to the right */
+  }
+}
