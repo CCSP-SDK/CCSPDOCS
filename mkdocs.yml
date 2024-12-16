@@ -87,7 +87,7 @@ nav:
     - IR-NIYANTRAC Onboarding: 
       - 'irniyantrac/onboarding/index.md'
     - OneM2M-AppId Registration:
-      - 'irniyantrac/OneM2MAppIdRegistration/index.md' 
+      - 'irniyantrac/oneM2MAppIdRegistration/index.md' 
   - IR-NIYANTRAC Messages:
     - 'irniyantracMessages/index.md'
     - Containers and Subscriptions Payloads:   
