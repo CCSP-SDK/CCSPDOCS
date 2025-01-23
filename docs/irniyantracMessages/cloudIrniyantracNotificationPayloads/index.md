@@ -19,11 +19,11 @@
             "lbl": ["TMSYNCNT"],
             "cnf": "irn:tsynA",
             "con": {
-                "devID": "<String value>",
-                "vndID": "<String value>",
-                "msgTy": "<String value>",
-                "ctlTy": "<String value>",
-                "serTm": "<String value>"
+                "devID": <String value>,
+                "vndID": <String value>,
+                "msgTy": <String value>,
+                "ctlTy": <String value>,
+                "serTm": <String value>
             }
         }
     },
@@ -120,12 +120,12 @@
             "lbl": ["ACKCNT"],
             "cnf": "irn:tsynR",
             "con": {
-                "devID": "<String value>",
-                "vndID": "<String value>",
-                "msgTy": "<String value>",
-                "ctlTy": "<String value>",
-                "dgt": "<String value>",
-                "ackVal": "<String value>"
+                "devID": <String value>,
+                "vndID": <String value>,
+                "msgTy": <String value>,
+                "ctlTy": <String value>,
+                "dgt": <String value>,
+                "ackVal": <String value>
             }
         }
     },
@@ -229,22 +229,22 @@
       "lbl": ["MNTCNT"],
       "cnf": "irn:smnt",
       "con": {
-        "devID": "<String value>",
-        "astID": "<String value>",
-        "pstID": "<String value>",
-        "vndID": "<String value>",
-        "appID": "<String value>",
-        "msgTy": "<String value>",
-        "astTy": "<String value>",
-        "dgt": "<String value>",
+        "devID": <String value>,
+        "astID": <String value>,
+        "pstID": <String value>,
+        "vndID": <String value>,
+        "appID": <String value>,
+        "msgTy": <String value>,
+        "astTy": <String value>,
+        "dgt": <String value>,
         "senObj": [
           {
-            "ty": "<String value>",
-            "val": "<Decimal value>"
+            "ty": <String value>,
+            "val": <Decimal value>
           },
           {
-            "ty": "<String value>",
-            "val": "<Decimal value>"
+            "ty": <String value>,
+            "val": <Decimal value>
           }
         ]
       }
@@ -359,17 +359,17 @@
       "lbl": ["CTRLCNT"],
       "cnf": "irn:ctrl",
       "con": {
-        "cmdID": "<String value>",
-        "devID": "<String value>",
-        "astID": "<String value>",
-        "pstID": "<String value>",
-        "vndID": "<String value>",
-        "appID": "<String value>",
-        "ctlTy": "<String value>",
-        "astTy": "<String value>",
-        "dgt": "<String value>",
-        "ttl": "<String value>",
-        "ctlVal": "<String value>"
+        "cmdID": <String value>,
+        "devID": <String value>,
+        "astID": <String value>,
+        "pstID": <String value>,
+        "vndID": <String value>,
+        "appID": <String value>,
+        "ctlTy": <String value>,
+        "astTy": <String value>,
+        "dgt": <String value>,
+        "ttl": <String value>,
+        "ctlVal": <String value>
       }
     }
   },
@@ -472,18 +472,18 @@
       "lbl": ["CTRLCNT"],
       "cnf": "irn:ctrlSe",
       "con": {
-        "cmdID": "<String value>",
-        "devID": "<String value>",
-        "astID": "<String value>",
-        "pstID": "<String value>",
-        "vndID": "<String value>",
-        "appID": "<String value>",
-        "ctlTy": "<String value>",
-        "astTy": "<String value>",
-        "dgt": "<String value>",
-        "min": "<decimal value>",
-        "max": "<decimal value>",
-        "unt": "<String value>"
+        "cmdID": <String value>,
+        "devID": <String value>,
+        "astID": <String value>,
+        "pstID": <String value>,
+        "vndID": <String value>,
+        "appID": <String value>,
+        "ctlTy": <String value>,
+        "astTy": <String value>,
+        "dgt": <String value>,
+        "min": <Decimal value>,
+        "max": <Decimal value>,
+        "unt": <String value>
       }
     }
   },
@@ -587,21 +587,21 @@
       "lbl": ["SCHCNT"],
       "cnf": "irn:sch",
       "con": {
-        "cmdID": "<String value>",
-        "devID": "<String value>",
-        "astID": "<String value>",
-        "pstID": "<String value>",
-        "vndID": "<String value>",
-        "appID": "<String value>",
-        "ctlTy": "<String value>",
-        "astTy": "<String value>",
-        "schID": "<String value>",
-        "sts": "<String value>",
-        "schtY": "<String value>",
-        "wkdy": "<String value>",
-        "dwkdy": "<String value>",
-        "tmpS": "<String value>",
-        "tmpE": "<String value>"
+        "cmdID": <String value>,
+        "devID": <String value>,
+        "astID": <String value>,
+        "pstID": <String value>,
+        "vndID": <String value>,
+        "appID": <String value>,
+        "ctlTy": <String value>,
+        "astTy": <String value>,
+        "schID": <String value>,
+        "sts": <String value>,
+        "schtY": <String value>,
+        "wkdy": <String value>,
+        "dwkdy": <String value>,
+        "tmpS": <String value>,
+        "tmpE": <String value>
       }
     }
   },
@@ -708,16 +708,16 @@
       "lbl": ["CTRLCNT"],
       "cnf": "irn:reSch",
       "con": {
-        "cmdID": "<String value>",
-        "devID": "<String value>",
-        "astID": "<String value>",
-        "pstID": "<String value>",
-        "vndID": "<String value>",
-        "appID": "<String value>",
-        "ctlTy": "<String value>",
-        "astTy": "<String value>",
-        "dgt": "<String value>",
-        "ctlVal": "<String value>"
+        "cmdID": <String value>,
+        "devID": <String value>,
+        "astID": <String value>,
+        "pstID": <String value>,
+        "vndID": <String value>,
+        "appID": <String value>,
+        "ctlTy": <String value>,
+        "astTy": <String value>,
+        "dgt": <String value>,
+        "ctlVal": <String value>
       }
     }
   },
@@ -821,17 +821,17 @@
       "lbl": ["ACKCNT"],
       "cnf": "irn:reSchA",
       "con": {
-        "cmdID": "<String value>",
-        "devID": "<String value>",
-        "astID": "<String value>",
-        "pstID": "<String value>",
-        "vndID": "<String value>",
-        "appID": "<String value>",
-        "msgTy": "<String value>",
-        "astTy": "<String value>",
-        "ctlTy": "<String value>",
-        "dgt": "<String value>",
-        "ackVal": "<String value>"
+        "cmdID": <String value>,
+        "devID": <String value>,
+        "astID": <String value>,
+        "pstID": <String value>,
+        "vndID": <String value>,
+        "appID": <String value>,
+        "msgTy": <String value>,
+        "astTy": <String value>,
+        "ctlTy": <String value>,
+        "dgt": <String value>,
+        "ackVal": <String value>
       }
     }
   },
@@ -934,23 +934,23 @@
   "fr": "<CRIS-AE-ID>",
   "rqi": "<unique-Request-Identifier>",
   "ty": 4,
-  "msgTy": "<String value>",
+  "msgTy": <String value>,
   "ot": "",
   "pc": {
     "m2m:cin": {
       "lbl": ["CTRLCNT"],
       "cnf": "irn:exSchL",
       "con": {
-        "cmdID": "<String value>",
-        "devID": "<String value>",
-        "astID": "<String value>",
-        "pstID": "<String value>",
-        "vndID": "<String value>",
-        "appID": "<String value>",
-        "astTy": "<String value>",
-        "ctlTy": "<String value>",
-        "dgt": "<String value>",
-        "ctVal": "<String value>"
+        "cmdID": <String value>,
+        "devID": <String value>,
+        "astID": <String value>,
+        "pstID": <String value>,
+        "vndID": <String value>,
+        "appID": <String value>,
+        "astTy": <String value>,
+        "ctlTy": <String value>,
+        "dgt": <String value>,
+        "ctVal": <String value>
       }
     }
   },
@@ -1056,21 +1056,21 @@
       "lbl": ["RULECNT"],
       "cnf": "irn:rule",
       "con": {
-        "cmdID": "<String value>",
-        "devID": "<String value>",
-        "astID": "<String value>",
-        "pstID": "<String value>",
-        "vndID": "<String value>",
-        "appID": "<String value>",
-        "ctlTy": "<String value>",
-        "astTy": "<String value>",
-        "ruleID": "<String value>",
-        "valH": "<decimal value>",
-        "valL": "<decimal value>",
-        "astIDH": "<String value>",
-        "actH": "<String value>",
-        "astIDL": "<String value>",
-        "actL": "<String value>"
+        "cmdID": <String value>,
+        "devID": <String value>,
+        "astID": <String value>,
+        "pstID": <String value>,
+        "vndID": <String value>,
+        "appID": <String value>,
+        "ctlTy": <String value>,
+        "astTy": <String value>,
+        "ruleID": <String value>,
+        "valH": <Decimal value>,
+        "valL": <Decimal value>,
+        "astIDH": <String value>,
+        "actH": <String value>,
+        "astIDL": <String value>,
+        "actL": <String value>
       }
     }
   },
@@ -1177,19 +1177,19 @@
       "lbl": ["ACKCNT"],
       "cnf": "irn:ruleER",
       "con": {
-        "devID": "<String value>",
-        "astID": "<String value>",
-        "pstID": "<String value>",
-        "vndID": "<String value>",
-        "appID": "<String value>",
-        "msgTy": "<String value>",
-        "astTy": "<String value>",
-        "dgt": "<String value>",
-        "ruleID": "<String value>",
-        "astIDA": "<String value>",
-        "acVal": "<decimal value>",
-        "ruOut": "<String value>",
-        "act": "<String value>"
+        "devID": <String value>,
+        "astID": <String value>,
+        "pstID": <String value>,
+        "vndID": <String value>,
+        "appID": <String value>,
+        "msgTy": <String value>,
+        "astTy": <String value>,
+        "dgt": <String value>,
+        "ruleID": <String value>,
+        "astIDA": <String value>,
+        "acVal": <Decimal value>,
+        "ruOut": <String value>,
+        "act": <String value>
       }
     }
   },
@@ -1297,16 +1297,16 @@
       "lbl": ["CTRLCNT"],
       "cnf": "irn:ruleRe",
       "con": {
-        "cmdID": "<String value>",
-        "devID": "<String value>",
-        "astID": "<String value>",
-        "pstID": "<String value>",
-        "vndID": "<String value>",
-        "appID": "<String value>",
-        "ctlTy": "<String value>",
-        "astTy": "<String value>",
-        "dgt": "<String value>",
-        "ctlVal": "<String value>"
+        "cmdID": <String value>,
+        "devID": <String value>,
+        "astID": <String value>,
+        "pstID": <String value>,
+        "vndID": <String value>,
+        "appID": <String value>,
+        "ctlTy": <String value>,
+        "astTy": <String value>,
+        "dgt": <String value>,
+        "ctlVal": <String value>
       }
     }
   },
