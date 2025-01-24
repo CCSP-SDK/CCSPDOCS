@@ -73,7 +73,7 @@ This payload creates a subscription resource for the alert container. It is used
             },
             "eeno": true,
             "nu": [
-                "<registrarUrl>/oneM2M/req/irn/json"
+                "<registrarUrl>/oneM2M/req/irn/alt/json"
             ],
             "nct": 1
         }
