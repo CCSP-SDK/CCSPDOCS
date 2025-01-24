@@ -16,7 +16,7 @@
     
     
       
-        <title>Reset Rule - IR-NIYANTRAC (Indian Railways Native IoT based Yield Analysis Telemetry, Recording and Control) Guide</title>
+        <title>Reset Schedule Acknowledgement - IR-NIYANTRAC (Indian Railways Native IoT based Yield Analysis Telemetry, Recording and Control) Guide</title>
       
     
     
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#reset-rule" class="md-skip">
+        <a href="#reset-schedule-acknowledgement" class="md-skip">
           Skip to content
         </a>
       
@@ -115,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Reset Rule
+              Reset Schedule Acknowledgement
             
           </span>
         </div>
@@ -363,6 +363,8 @@
       
         
       
+        
+      
     
     
       
@@ -450,8 +452,8 @@
                   
 
 
-<h1 id="reset-rule">Reset Rule</h1>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>## Payload with Data Types: (Device to Cloud on &quot;CTRLCNT&quot; container)
+<h1 id="reset-schedule-acknowledgement">Reset Schedule Acknowledgement</h1>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>## Payload with Data Types: (Device to Cloud on &quot;ACKCNT&quot; container)
 </code></pre></div></td></tr></table></div>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
@@ -478,34 +480,38 @@
 <span class="normal"><a href="#__codelineno-1-23">23</a></span>
 <span class="normal"><a href="#__codelineno-1-24">24</a></span>
 <span class="normal"><a href="#__codelineno-1-25">25</a></span>
-<span class="normal"><a href="#__codelineno-1-26">26</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="p">{</span>
+<span class="normal"><a href="#__codelineno-1-26">26</a></span>
+<span class="normal"><a href="#__codelineno-1-27">27</a></span>
+<span class="normal"><a href="#__codelineno-1-28">28</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="p">{</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">  </span><span class="nt">&quot;op&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
 <a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">  </span><span class="nt">&quot;to&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;container-ResourceId&gt;&quot;</span><span class="p">,</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">  </span><span class="nt">&quot;fr&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;CRIS-AE-ID&gt;&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">  </span><span class="nt">&quot;fr&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;DEVICE-AE-ID&gt;&quot;</span><span class="p">,</span>
 <a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">  </span><span class="nt">&quot;rqi&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;unique-Request-Identifier&gt;&quot;</span><span class="p">,</span>
 <a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="w">  </span><span class="nt">&quot;ty&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="w">  </span><span class="nt">&quot;pc&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w">    </span><span class="nt">&quot;m2m:cin&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="w">      </span><span class="nt">&quot;lbl&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;CTRLCNT&quot;</span><span class="p">],</span>
-<a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="w">      </span><span class="nt">&quot;cnf&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;irn:ruleRe&quot;</span><span class="p">,</span>
-<a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="w">      </span><span class="nt">&quot;con&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="w">        </span><span class="nt">&quot;cmdID&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;String value&gt;&quot;</span><span class="p">,</span>
-<a id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="w">        </span><span class="nt">&quot;devID&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;String value&gt;&quot;</span><span class="p">,</span>
-<a id="__codelineno-1-14" name="__codelineno-1-14"></a><span class="w">        </span><span class="nt">&quot;astID&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;String value&gt;&quot;</span><span class="p">,</span>
-<a id="__codelineno-1-15" name="__codelineno-1-15"></a><span class="w">        </span><span class="nt">&quot;pstID&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;String value&gt;&quot;</span><span class="p">,</span>
-<a id="__codelineno-1-16" name="__codelineno-1-16"></a><span class="w">        </span><span class="nt">&quot;vndID&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;String value&gt;&quot;</span><span class="p">,</span>
-<a id="__codelineno-1-17" name="__codelineno-1-17"></a><span class="w">        </span><span class="nt">&quot;appID&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;String value&gt;&quot;</span><span class="p">,</span>
-<a id="__codelineno-1-18" name="__codelineno-1-18"></a><span class="w">        </span><span class="nt">&quot;ctlTy&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;String value&gt;&quot;</span><span class="p">,</span>
-<a id="__codelineno-1-19" name="__codelineno-1-19"></a><span class="w">        </span><span class="nt">&quot;astTy&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;String value&gt;&quot;</span><span class="p">,</span>
-<a id="__codelineno-1-20" name="__codelineno-1-20"></a><span class="w">        </span><span class="nt">&quot;dgt&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;String value&gt;&quot;</span><span class="p">,</span>
-<a id="__codelineno-1-21" name="__codelineno-1-21"></a><span class="w">        </span><span class="nt">&quot;ctlVal&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;String value&gt;&quot;</span>
-<a id="__codelineno-1-22" name="__codelineno-1-22"></a><span class="w">      </span><span class="p">}</span>
-<a id="__codelineno-1-23" name="__codelineno-1-23"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-1-24" name="__codelineno-1-24"></a><span class="w">  </span><span class="p">},</span>
-<a id="__codelineno-1-25" name="__codelineno-1-25"></a><span class="w">  </span><span class="nt">&quot;rvi&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;3&quot;</span>
-<a id="__codelineno-1-26" name="__codelineno-1-26"></a><span class="p">}</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="w">  </span><span class="nt">&quot;ot&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;devTm&gt;&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w">  </span><span class="nt">&quot;pc&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="w">    </span><span class="nt">&quot;m2m:cin&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="w">      </span><span class="nt">&quot;lbl&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;ACKCNT&quot;</span><span class="p">],</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="w">      </span><span class="nt">&quot;cnf&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;irn:reSchA&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="w">      </span><span class="nt">&quot;con&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="w">        </span><span class="nt">&quot;cmdID&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;String value&gt;&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14"></a><span class="w">        </span><span class="nt">&quot;devID&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;String value&gt;&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15"></a><span class="w">        </span><span class="nt">&quot;astID&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;String value&gt;&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16"></a><span class="w">        </span><span class="nt">&quot;pstID&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;String value&gt;&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17"></a><span class="w">        </span><span class="nt">&quot;vndID&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;String value&gt;&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-18" name="__codelineno-1-18"></a><span class="w">        </span><span class="nt">&quot;appID&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;String value&gt;&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-19" name="__codelineno-1-19"></a><span class="w">        </span><span class="nt">&quot;msgTy&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;String value&gt;&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-20" name="__codelineno-1-20"></a><span class="w">        </span><span class="nt">&quot;astTy&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;String value&gt;&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-21" name="__codelineno-1-21"></a><span class="w">        </span><span class="nt">&quot;ctlTy&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;String value&gt;&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-22" name="__codelineno-1-22"></a><span class="w">        </span><span class="nt">&quot;dgt&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;String value&gt;&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-23" name="__codelineno-1-23"></a><span class="w">        </span><span class="nt">&quot;ackVal&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;String value&gt;&quot;</span>
+<a id="__codelineno-1-24" name="__codelineno-1-24"></a><span class="w">      </span><span class="p">}</span>
+<a id="__codelineno-1-25" name="__codelineno-1-25"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-26" name="__codelineno-1-26"></a><span class="w">  </span><span class="p">},</span>
+<a id="__codelineno-1-27" name="__codelineno-1-27"></a><span class="w">  </span><span class="nt">&quot;rvi&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;3&quot;</span>
+<a id="__codelineno-1-28" name="__codelineno-1-28"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>## Reset Rule Payload with Sample Values:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>## Reset Schedule Acknowledgement Payload with Sample Values:
 </code></pre></div></td></tr></table></div>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
@@ -532,45 +538,50 @@
 <span class="normal"><a href="#__codelineno-3-23">23</a></span>
 <span class="normal"><a href="#__codelineno-3-24">24</a></span>
 <span class="normal"><a href="#__codelineno-3-25">25</a></span>
-<span class="normal"><a href="#__codelineno-3-26">26</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="p">{</span>
+<span class="normal"><a href="#__codelineno-3-26">26</a></span>
+<span class="normal"><a href="#__codelineno-3-27">27</a></span>
+<span class="normal"><a href="#__codelineno-3-28">28</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="p">{</span>
 <a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="w">  </span><span class="nt">&quot;op&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
 <a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="w">  </span><span class="nt">&quot;to&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;container-ResourceId&gt;&quot;</span><span class="p">,</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="w">  </span><span class="nt">&quot;fr&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;CRIS-AE-ID&gt;&quot;</span><span class="p">,</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="w">  </span><span class="nt">&quot;fr&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;DEVICE-AE-ID&gt;&quot;</span><span class="p">,</span>
 <a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="w">  </span><span class="nt">&quot;rqi&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;unique-Request-Identifier&gt;&quot;</span><span class="p">,</span>
 <a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="w">  </span><span class="nt">&quot;ty&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span>
-<a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="w">  </span><span class="nt">&quot;pc&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="w">    </span><span class="nt">&quot;m2m:cin&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="w">      </span><span class="nt">&quot;lbl&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;CTRLCNT&quot;</span><span class="p">],</span>
-<a id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="w">      </span><span class="nt">&quot;cnf&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;irn:ruleRe&quot;</span><span class="p">,</span>
-<a id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="w">      </span><span class="nt">&quot;con&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-12" name="__codelineno-3-12"></a><span class="w">        </span><span class="nt">&quot;cmdID&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;64575752&quot;</span><span class="p">,</span>
-<a id="__codelineno-3-13" name="__codelineno-3-13"></a><span class="w">        </span><span class="nt">&quot;devID&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0362500001&quot;</span><span class="p">,</span>
-<a id="__codelineno-3-14" name="__codelineno-3-14"></a><span class="w">        </span><span class="nt">&quot;astID&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0360500001&quot;</span><span class="p">,</span>
-<a id="__codelineno-3-15" name="__codelineno-3-15"></a><span class="w">        </span><span class="nt">&quot;pstID&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0360200001&quot;</span><span class="p">,</span>
-<a id="__codelineno-3-16" name="__codelineno-3-16"></a><span class="w">        </span><span class="nt">&quot;vndID&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;11&quot;</span><span class="p">,</span>
-<a id="__codelineno-3-17" name="__codelineno-3-17"></a><span class="w">        </span><span class="nt">&quot;appID&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;03&quot;</span><span class="p">,</span>
-<a id="__codelineno-3-18" name="__codelineno-3-18"></a><span class="w">        </span><span class="nt">&quot;ctlTy&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;08&quot;</span><span class="p">,</span>
-<a id="__codelineno-3-19" name="__codelineno-3-19"></a><span class="w">        </span><span class="nt">&quot;astTy&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;05&quot;</span><span class="p">,</span>
-<a id="__codelineno-3-20" name="__codelineno-3-20"></a><span class="w">        </span><span class="nt">&quot;dgt&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;26102022075135&quot;</span><span class="p">,</span>
-<a id="__codelineno-3-21" name="__codelineno-3-21"></a><span class="w">        </span><span class="nt">&quot;ctlVal&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span>
-<a id="__codelineno-3-22" name="__codelineno-3-22"></a><span class="w">      </span><span class="p">}</span>
-<a id="__codelineno-3-23" name="__codelineno-3-23"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-3-24" name="__codelineno-3-24"></a><span class="w">  </span><span class="p">},</span>
-<a id="__codelineno-3-25" name="__codelineno-3-25"></a><span class="w">  </span><span class="nt">&quot;rvi&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;3&quot;</span>
-<a id="__codelineno-3-26" name="__codelineno-3-26"></a><span class="p">}</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="w">  </span><span class="nt">&quot;ot&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;20141003T112032&quot;</span><span class="p">,</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="w">  </span><span class="nt">&quot;pc&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="w">    </span><span class="nt">&quot;m2m:cin&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="w">      </span><span class="nt">&quot;lbl&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;ACKCNT&quot;</span><span class="p">],</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="w">      </span><span class="nt">&quot;cnf&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;irn:reSchA&quot;</span><span class="p">,</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12"></a><span class="w">      </span><span class="nt">&quot;con&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13"></a><span class="w">        </span><span class="nt">&quot;cmdID&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;343434&quot;</span><span class="p">,</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14"></a><span class="w">        </span><span class="nt">&quot;devID&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0362500001&quot;</span><span class="p">,</span>
+<a id="__codelineno-3-15" name="__codelineno-3-15"></a><span class="w">        </span><span class="nt">&quot;astID&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0360400001&quot;</span><span class="p">,</span>
+<a id="__codelineno-3-16" name="__codelineno-3-16"></a><span class="w">        </span><span class="nt">&quot;pstID&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0360100001&quot;</span><span class="p">,</span>
+<a id="__codelineno-3-17" name="__codelineno-3-17"></a><span class="w">        </span><span class="nt">&quot;vndID&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;11&quot;</span><span class="p">,</span>
+<a id="__codelineno-3-18" name="__codelineno-3-18"></a><span class="w">        </span><span class="nt">&quot;appID&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;03&quot;</span><span class="p">,</span>
+<a id="__codelineno-3-19" name="__codelineno-3-19"></a><span class="w">        </span><span class="nt">&quot;msgTy&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;03&quot;</span><span class="p">,</span>
+<a id="__codelineno-3-20" name="__codelineno-3-20"></a><span class="w">        </span><span class="nt">&quot;astTy&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;04&quot;</span><span class="p">,</span>
+<a id="__codelineno-3-21" name="__codelineno-3-21"></a><span class="w">        </span><span class="nt">&quot;ctlTy&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;05&quot;</span><span class="p">,</span>
+<a id="__codelineno-3-22" name="__codelineno-3-22"></a><span class="w">        </span><span class="nt">&quot;dgt&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;26102022075135&quot;</span><span class="p">,</span>
+<a id="__codelineno-3-23" name="__codelineno-3-23"></a><span class="w">        </span><span class="nt">&quot;ackVal&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span>
+<a id="__codelineno-3-24" name="__codelineno-3-24"></a><span class="w">      </span><span class="p">}</span>
+<a id="__codelineno-3-25" name="__codelineno-3-25"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-3-26" name="__codelineno-3-26"></a><span class="w">  </span><span class="p">},</span>
+<a id="__codelineno-3-27" name="__codelineno-3-27"></a><span class="w">  </span><span class="nt">&quot;rvi&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;3&quot;</span>
+<a id="__codelineno-3-28" name="__codelineno-3-28"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="field-descriptions">Field Descriptions:</h2>
 <ul>
 <li><strong>op (Operation):</strong> 1 signifies a create operation.</li>
 <li><strong>to (To):</strong> The target resource, represented by <code>&lt;container-ResourceId&gt;</code>.</li>
-<li><strong>fr (From):</strong> The originator of the request, represented by <code>&lt;CRIS-AE-ID&gt;</code>.</li>
+<li><strong>fr (From):</strong> The originator of the request, represented by <code>&lt;DEVICE-AE-ID&gt;</code>.</li>
 <li><strong>rqi (Request Identifier):</strong> A unique request identifier.</li>
 <li><strong>ty (Resource Type):</strong> 4 represents a content instance resource.</li>
 <li><strong>msgTy (Message Type):</strong> Message Type (String value).</li>
+<li><strong>ot (Originating Timestamp):</strong> Current Timestamp of the device when the request is made.</li>
 <li><strong>pc (Primitive Content):</strong> Contains the actual request data.</li>
 <li><strong>m2m:cin:</strong> Represents the <code>&lt;contentInstance&gt;</code> object containing:<ul>
 <li><strong>lbl:</strong> The labels attached to the <code>&lt;contentInstance&gt;</code> resource in the request.</li>
-<li><strong>cnf:</strong> It represents the content info attribute of the <code>&lt;contentInstance&gt;</code> resource.</li>
+<li><strong>cnf:</strong> Represents the content info attribute of the <code>&lt;contentInstance&gt;</code> resource.</li>
 <li><strong>con:</strong> The content of the <code>&lt;contentInstance&gt;</code> resource.</li>
 </ul>
 </li>
