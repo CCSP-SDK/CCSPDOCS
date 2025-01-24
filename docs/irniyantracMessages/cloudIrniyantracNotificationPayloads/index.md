@@ -1,295 +1,48 @@
 # Cloud/IR-NIYANTRAC Notification Payloads
 
-
-## Connect Time/Sync Ack 
+## Notification Payload
 
 ```
-## Payload with Data Types: (Created by CRIS, received as notification by device)
+## (Sample Notify Message) (Flows from CCSP to Device)
 ```
 
 ```json
 {
-    "op": 1,
-    "to": "<container-ResourceId>",
-    "fr": "<CRIS-AE-ID>",
-    "rqi": "<unique-Request-Identifier>",
-    "ty": 4,
-    "pc": {
-        "m2m:cin": {
+  "op": 5,
+  "to": "<registrarURL>/oneM2M/req/<registrarCseId>/<Device-AE-ID>/json",
+  "fr": "/<registrarCseId>",
+  "rqi": "<unique-Request-Identifier>",
+  "ty": 4,
+  "pc": {
+    "m2m:sgn": {
+      "nev": {
+        "rep": {
+          "m2m:cin": {
+            "ty": 4,
+            "ri": "D80802",
+            "pi": "R2511",
+            "ct": "20230624T142248",
+            "lt": "20230624T142248",
             "lbl": ["TMSYNCNT"],
             "cnf": "irn:tsynA",
+            "rn": "cin82461",
+            "et": "20230722T171046",
+            "st": 2,
+            "cr": "SP11001",
+            "cs": 848,
             "con": {
-                "devID": <String value>,
-                "vndID": <String value>,
-                "msgTy": <String value>,
-                "ctlTy": <String value>,
-                "serTm": <String value>
+              "devID": "0362200001",
+              "vndID": "11",
+              "msgTy": "04",
+              "ctlTy": "03",
+              "serTm": "261020220751354"
             }
-        }
-    },
-    "rvi": "3"
-}
-```
-
-```
-## Payload with Sample Values:
-```
-
-```json
-{
-    "op": 1,
-    "to": "<container-ResourceId>",
-    "fr": "<CRIS-AE-ID>",
-    "rqi": "<unique-Request-Identifier>",
-    "ty": 4,
-    "pc": {
-        "m2m:cin": {
-            "lbl": ["TMSYNCNT"],
-            "cnf": "irn:tsynA",
-            "con": {
-                "devID": "0362500001",
-                "vndID": "11",
-                "msgTy": "04",
-                "ctlTy": "03",
-                "serTm": "261020220751354"
-            }
-        }
-    },
-    "rvi": "3"
-}
-```
-
-<!-- ### Field Descriptions:
-
-- **op (Operation):** 1 signifies a create operation.
-- **to (To):** The target resource, represented by `<container-ResourceId>`.
-- **fr (From):** The originator of the request, represented by `<CRIS-AE-ID>`.
-- **rqi (Request Identifier):** A unique request identifier.
-- **ty (Resource Type):** 4 represents a content instance resource.
-- **msgTy (Message Type):** Message Type (String value).
-- **pc (Primitive Content):** Contains the actual request data.
-  - **m2m:cin:** Represents the `<contentInstance>` object containing:
-    - **lbl:** The labels attached to the `<contentInstance>` resource in the request.
-    - **cnf:** It represents the content info attribute of the `<contentInstance>` resource.
-    - **con:** The content of the `<contentInstance>` resource.
-- **rvi (Release Version Indicator):** Specifies the version of the oneM2M release being used in the request.
--->
-
-
-<details>
-  <summary><strong>Field Descriptions:</strong></summary>
-
-  <ul>
-    <li><strong>op (Operation):</strong> 1 signifies a create operation.</li>
-    <li><strong>to (To):</strong> The target resource, represented by &lt;container-ResourceId&gt;.</li>
-    <li><strong>fr (From):</strong> The originator of the request, represented by &lt;CRIS-AE-ID&gt;.</li>
-    <li><strong>rqi (Request Identifier):</strong> A unique request identifier.</li>
-    <li><strong>ty (Resource Type):</strong> 4 represents a content instance resource.</li>
-    <li><strong>pc (Primitive Content):</strong> Contains the actual request data.
-      <ul>
-        <li><strong>m2m:cin:</strong> Represents the &lt;contentInstance&gt; object containing:
-          <ul>
-            <li><strong>lbl:</strong> The labels attached to the &lt;contentInstance&gt; resource in the request.</li>
-            <li><strong>cnf:</strong> It represents the content info attribute of the &lt;contentInstance&gt; resource.</li>
-            <li><strong>con:</strong> The content of the &lt;contentInstance&gt; resource.</li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-    <li><strong>rvi (Release Version Indicator):</strong> Specifies the version of the oneM2M release being used in the request.</li>
-  </ul>
-
-</details>
-
-## Connect Time/Sync Ack Response
-
-```
-## Payload with Data Types:
-```
-
-```json
-{
-    "op": 1,
-    "to": "<container-ResourceId>",
-    "fr": "<DEVICE-AE-ID>",
-    "rqi": "<unique-Request-Identifier>",
-    "ty": 4,
-    "ot": "<devTm>",
-    "pc": {
-        "m2m:cin": {
-            "lbl": ["ACKCNT"],
-            "cnf": "irn:tsynR",
-            "con": {
-                "devID": <String value>,
-                "vndID": <String value>,
-                "msgTy": <String value>,
-                "ctlTy": <String value>,
-                "dgt": <String value>,
-                "ackVal": <String value>
-            }
-        }
-    },
-    "rvi": "3"
-}
-```
-
-```
-## Payload with Sample Values:
-```
-
-```json
-{
-    "op": 1,
-    "to": "<container-ResourceId>",
-    "fr": "<DEVICE-AE-ID>",
-    "rqi": "<unique-Request-Identifier>",
-    "ty": 4,
-    "ot": "20141003T112032",
-    "pc": {
-        "m2m:cin": {
-            "lbl": ["ACKCNT"],
-            "cnf": "irn:tsynR",
-            "con": {
-                "devID": "0362500001",
-                "vndID": "11",
-                "msgTy": "08",
-                "ctlTy": "03",
-                "dgt": "26102022075135",
-                "ackVal": "1"
-            }
-        }
-    },
-    "rvi": "3"
-}
-```
-
-<!-- ### Field Descriptions:
-
-- **op (Operation):** 1 signifies a create operation.
-- **to (To):** The target resource, represented by `<container-ResourceId>`.
-- **fr (From):** The originator of the request, represented by `<DEVICE-AE-ID>`.
-- **rqi (Request Identifier):** A unique request identifier.
-- **ty (Resource Type):** 4 represents a content instance resource.
-- **msgTy (Message Type):** Message Type (String value).
-- **ot (Originating Timestamp):** Current Timestamp of the device when the request is made.
-- **pc (Primitive Content):** Contains the actual request data.
-  - **m2m:cin:** Represents the `<contentInstance>` object containing:
-    - **lbl:** The labels attached to the `<contentInstance>` resource in the request.
-    - **cnf:** It represents the content info attribute of the `<contentInstance>` resource.
-    - **con:** The content of the `<contentInstance>` resource.
-- **rvi (Release Version Indicator):** Specifies the version of the oneM2M release being used in the request.
--->
-
-
-<details>
-  <summary><strong>Field Descriptions:</strong></summary>
-
-  <ul>
-    <li><strong>op (Operation):</strong> 1 signifies a create operation.</li>
-    <li><strong>to (To):</strong> The target resource, represented by &lt;container-ResourceId&gt;.</li>
-    <li><strong>fr (From):</strong> The originator of the request, represented by &lt;DEVICE-AE-ID&gt;.</li>
-    <li><strong>rqi (Request Identifier):</strong> A unique request identifier.</li>
-    <li><strong>ty (Resource Type):</strong> 4 represents a content instance resource.</li>
-    <li><strong>msgTy (Message Type):</strong> Message Type (String value).</li>
-    <li><strong>ot (Originating Timestamp):</strong> The current Timestamp of the device when the request is made.</li>
-    <li><strong>pc (Primitive Content):</strong> Contains the actual request data.
-      <ul>
-        <li><strong>m2m:cin:</strong> Represents the &lt;contentInstance&gt; object containing:
-          <ul>
-            <li><strong>lbl:</strong> The labels attached to the &lt;contentInstance&gt; resource in the request.</li>
-            <li><strong>cnf:</strong> It represents the content info attribute of the &lt;contentInstance&gt; resource.</li>
-            <li><strong>con:</strong> The content of the &lt;contentInstance&gt; resource.</li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-    <li><strong>rvi (Release Version Indicator):</strong> Specifies the version of the oneM2M release being used in the request.</li>
-  </ul>
-
-</details>
-
-
-
-## Sensor Values Monitoring 
-
-```
-## Payload with Data Types: (Device to Cloud on "MNTCNT" container)
-```
-
-```json
-{
-  "op": 1,
-  "to": "<container-ResourceId>",
-  "fr": "<DEVICE-AE-ID>",
-  "rqi": "<unique-Request-Identifier>",
-  "ty": 4,
-  "ot": "<devTm>",
-  "pc": {
-    "m2m:cin": {
-      "lbl": ["MNTCNT"],
-      "cnf": "irn:smnt",
-      "con": {
-        "devID": <String value>,
-        "astID": <String value>,
-        "pstID": <String value>,
-        "vndID": <String value>,
-        "appID": <String value>,
-        "msgTy": <String value>,
-        "astTy": <String value>,
-        "dgt": <String value>,
-        "senObj": [
-          {
-            "ty": <String value>,
-            "val": <Decimal value>
-          },
-          {
-            "ty": <String value>,
-            "val": <Decimal value>
           }
-        ]
-      }
-    }
-  },
-  "rvi": "3"
-}
-```
-
-```
-## Payload with Sample Values:
-```
-
-```json
-{
-  "op": 1,
-  "to": "<container-ResourceId>",
-  "fr": "<DEVICE-AE-ID>",
-  "rqi": "<unique-Request-Identifier>",
-  "ty": 4,
-  "ot": "20141003T112032",
-  "pc": {
-    "m2m:cin": {
-      "lbl": ["MNTCNT"],
-      "cnf": "irn:smnt",
-      "con": {
-        "devID": "0362500001",
-        "astID": "0360500001",
-        "pstID": "0360200001",
-        "vndID": "11",
-        "appID": "03",
-        "msgTy": "01",
-        "astTy": "05",
-        "dgt": "26102022075135",
-        "senObj": [
-          {
-            "ty": "01",
-            "val": 3.4
-          },
-          {
-            "ty": "02",
-            "val": 40.5
-          }
-        ]
-      }
+        },
+        "net": 3
+      },
+      "sur": "/CSE001/R2524",
+      "cr": "Sdev2"
     }
   },
   "rvi": "3"
@@ -298,39 +51,34 @@
 
 <!-- ### Field Descriptions:
 
-- **op (Operation):** 1 signifies a create operation.
-- **to (To):** The target resource, represented by `<container-ResourceId>`.
-- **fr (From):** The originator of the request, represented by `<DEVICE-AE-ID>`.
-- **rqi (Request Identifier):** A unique request identifier.
-- **ty (Resource Type):** 4 represents a content instance resource.
-- **msgTy (Message Type):** Message Type (String value).
-- **ot (Originating Timestamp):** Current Timestamp of the device when the request is made.
-- **pc (Primitive Content):** Contains the actual request data.
-  - **m2m:cin:** Represents the `<contentInstance>` object containing:
-    - **lbl:** The labels attached to the `<contentInstance>` resource in the request.
-    - **cnf:** Represents the content info attribute of the `<contentInstance>` resource.
-    - **con:** The content of the `<contentInstance>` resource.
+- **op (Operation):** 5 signifies a notify operation.
+- **to (To):** The target resource, represented by `<registrarURL>/oneM2M/req/<registrarCseId>/<Device-AE-ID>/json`.
+- **fr (From):** The originator of the request, represented by `/<registrarCseId>`.
+- **rqi (Request Identifier):** A unique identifier for the request.
+- **ty (Resource Type):** 4 indicates the resource is a content instance.
+- **pc (Primitive Content):** Contains the actual notification data.
+  - **m2m:sgn:** Represents the single notification object containing:
+    - **sur:** Represents the subscription reference of the notification.
+    - **cr:** Represents the creator of the notification.
 - **rvi (Release Version Indicator):** Specifies the version of the oneM2M release being used in the request.
 -->
 
+
 <details>
-  <summary><strong>Field Descriptions:</strong></summary>
+  <summary><strong>Field Descriptions</strong></summary>
 
   <ul>
-    <li><strong>op (Operation):</strong> 1 signifies a create operation.</li>
-    <li><strong>to (To):</strong> The target resource, represented by &lt;container-ResourceId&gt;.</li>
-    <li><strong>fr (From):</strong> The originator of the request, represented by &lt;DEVICE-AE-ID&gt;.</li>
-    <li><strong>rqi (Request Identifier):</strong> A unique request identifier.</li>
-    <li><strong>ty (Resource Type):</strong> 4 represents a content instance resource.</li>
-    <li><strong>msgTy (Message Type):</strong> Message Type (String value).</li>
-    <li><strong>ot (Originating Timestamp):</strong> The current Timestamp of the device when the request is made.</li>
-    <li><strong>pc (Primitive Content):</strong> Contains the actual request data.
+    <li><strong>op (Operation):</strong> 5 signifies a notify operation.</li>
+    <li><strong>to (To):</strong> The target resource's represented by &lt;registrarURL&gt;/oneM2M/req/&lt;registrarCseId&gt;/&lt;Device-AE-ID&gt;/json.</li>
+    <li><strong>fr (From):</strong> The originator of the request, represented by /&lt;registrarCseId&gt;.</li>
+    <li><strong>rqi (Request Identifier):</strong> A unique identifier for the request.</li>
+    <li><strong>ty (Resource Type):</strong> 4 indicates the resource is a content instance.</li>
+    <li><strong>pc (Primitive Content):</strong> Contains the actual notification data.
       <ul>
-        <li><strong>m2m:cin:</strong> Represents the &lt;contentInstance&gt; object containing:
+        <li><strong>m2m:sgn:</strong> Represents the single notification object containing:</li>
           <ul>
-            <li><strong>lbl:</strong> The labels attached to the &lt;contentInstance&gt; resource in the request.</li>
-            <li><strong>cnf:</strong> It represents the content info attribute of the &lt;contentInstance&gt; resource.</li>
-            <li><strong>con:</strong> The content of the &lt;contentInstance&gt; resource.</li>
+            <li><strong>sur:</strong> It represents subscriptionReference of the notification.</li>
+            <li><strong>cr:</strong> It represents Creator of the notification.</li>
           </ul>
         </li>
       </ul>
@@ -341,1049 +89,151 @@
 </details>
 
 
-## Control Publish-Operation
-
-```
-## Payload with Data Types: (Device to Cloud on “CTRLCNT” container)
-```
-
-```json
-{
-  "op": 1,
-  "to": "<container-ResourceId>",
-  "fr": "<CRIS-AE-ID>",
-  "rqi": "<unique-Request-Identifier>",
-  "ty": 4,
-  "pc": {
-    "m2m:cin": {
-      "lbl": ["CTRLCNT"],
-      "cnf": "irn:ctrl",
-      "con": {
-        "cmdID": <String value>,
-        "devID": <String value>,
-        "astID": <String value>,
-        "pstID": <String value>,
-        "vndID": <String value>,
-        "appID": <String value>,
-        "ctlTy": <String value>,
-        "astTy": <String value>,
-        "dgt": <String value>,
-        "ttl": <String value>,
-        "ctlVal": <String value>
-      }
-    }
-  },
-  "rvi": "3"
-}
-```
-
-```
-## Payload with Sample Values:
-```
-
-```json
-{
-  "op": 1,
-  "to": "<container-ResourceId>",
-  "fr": "<CRIS-AE-ID>",
-  "rqi": "<unique-Request-Identifier>",
-  "ty": 4,
-  "pc": {
-    "m2m:cin": {
-      "lbl": ["CTRLCNT"],
-      "cnf": "irn:ctrl",
-      "con": {
-        "cmdID": "64575752",
-        "devID": "0362500001",
-        "astID": "0360800001",
-        "pstID": "0360100001",
-        "vndID": "11",
-        "appID": "03",
-        "ctlTy": "01",
-        "astTy": "08",
-        "dgt": "26102022075135",
-        "ttl": "26102022082135",
-        "ctlVal": "1"
-      }
-    }
-  },
-  "rvi": "3"
-}
-```
-
-<!-- ### Field Descriptions:
-
-- **op (Operation):** 1 signifies a create operation.
-- **to (To):** The target resource, represented by `<container-ResourceId>`.
-- **fr (From):** The originator of the request, represented by `<CRIS-AE-ID>`.
-- **rqi (Request Identifier):** A unique request identifier.
-- **ty (Resource Type):** 4 represents a content instance resource.
-- **pc (Primitive Content):** Contains the actual request data.
-  - **m2m:cin:** Represents the `<contentInstance>` object containing:
-    - **lbl:** The labels attached to the `<contentInstance>` resource in the request.
-    - **cnf:** Represents the content info attribute of the `<contentInstance>` resource.
-    - **con:** The content of the `<contentInstance>` resource.
-- **rvi (Release Version Indicator):** Specifies the version of the oneM2M release being used in the request.
--->
-
-
-<details>
-  <summary><strong>Field Descriptions:</strong></summary>
-
-  <ul>
-    <li><strong>op (Operation):</strong> 1 signifies a create operation.</li>
-    <li><strong>to (To):</strong> The target resource, represented by &lt;container-ResourceId&gt;.</li>
-    <li><strong>fr (From):</strong> The originator of the request, represented by &lt;CRIS-AE-ID&gt;.</li>
-    <li><strong>rqi (Request Identifier):</strong> A unique request identifier.</li>
-    <li><strong>ty (Resource Type):</strong> 4 represents a content instance resource.</li>
-    <li><strong>msgTy (Message Type):</strong> Message Type (String value).</li>
-    <li><strong>pc (Primitive Content):</strong> Contains the actual request data.
-      <ul>
-        <li><strong>m2m:cin:</strong> Represents the &lt;contentInstance&gt; object containing:
-          <ul>
-            <li><strong>lbl:</strong> The labels attached to the &lt;contentInstance&gt; resource in the request.</li>
-            <li><strong>cnf:</strong> It represents the content info attribute of the &lt;contentInstance&gt; resource.</li>
-            <li><strong>con:</strong> The content of the &lt;contentInstance&gt; resource.</li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-    <li><strong>rvi (Release Version Indicator):</strong> Specifies the version of the oneM2M release being used in the request.</li>
-  </ul>
-
-</details>
-
-
-## Control Publish Sensor Calibration
-
-```
-## Payload with Data Types: (Device to Cloud on “CTRLCNT” container)
-```
-
-```json
-{
-  "op": 1,
-  "to": "<container-ResourceId>",
-  "fr": "<CRIS-AE-ID>",
-  "rqi": "<unique-Request-Identifier>",
-  "ty": 4,
-  "pc": {
-    "m2m:cin": {
-      "lbl": ["CTRLCNT"],
-      "cnf": "irn:ctrlSe",
-      "con": {
-        "cmdID": <String value>,
-        "devID": <String value>,
-        "astID": <String value>,
-        "pstID": <String value>,
-        "vndID": <String value>,
-        "appID": <String value>,
-        "ctlTy": <String value>,
-        "astTy": <String value>,
-        "dgt": <String value>,
-        "min": <Decimal value>,
-        "max": <Decimal value>,
-        "unt": <String value>
-      }
-    }
-  },
-  "rvi": "3"
-}
-```
-
-```
-## Payload with Sample Values:
-```
-
-```json
-{
-  "op": 1,
-  "to": "<container-ResourceId>",
-  "fr": "<CRIS-AE-ID>",
-  "rqi": "<unique-Request-Identifier>",
-  "ty": 4,
-  "pc": {
-    "m2m:cin": {
-      "lbl": ["CTRLCNT"],
-      "cnf": "irn:ctrlSe",
-      "con": {
-        "cmdID": "64575752",
-        "devID": "0362500001",
-        "astID": "0360500001",
-        "pstID": "0360200001",
-        "vndID": "11",
-        "appID": "03",
-        "ctlTy": "02",
-        "astTy": "05",
-        "dgt": "26102022075135",
-        "min": 0,
-        "max": 500,
-        "unt": "01"
-      }
-    }
-  },
-  "rvi": "3"
-}
-```
-
-<!-- ### Field Descriptions:
-
-- **op (Operation):** 1 signifies a create operation.
-- **to (To):** The target resource, represented by `<container-ResourceId>`.
-- **fr (From):** The originator of the request, represented by `<CRIS-AE-ID>`.
-- **rqi (Request Identifier):** A unique request identifier.
-- **ty (Resource Type):** 4 represents a content instance resource.
-- **pc (Primitive Content):** Contains the actual request data.
-  - **m2m:cin:** Represents the `<contentInstance>` object containing:
-    - **lbl:** The labels attached to the `<contentInstance>` resource in the request.
-    - **cnf:** Represents the content info attribute of the `<contentInstance>` resource.
-    - **con:** The content of the `<contentInstance>` resource.
-- **rvi (Release Version Indicator):** Specifies the version of the oneM2M release being used in the request.
--->
-
-
-<details>
-  <summary><strong>Field Descriptions:</strong></summary>
-
-  <ul>
-    <li><strong>op (Operation):</strong> 1 signifies a create operation.</li>
-    <li><strong>to (To):</strong> The target resource, represented by &lt;container-ResourceId&gt;.</li>
-    <li><strong>fr (From):</strong> The originator of the request, represented by &lt;CRIS-AE-ID&gt;.</li>
-    <li><strong>rqi (Request Identifier):</strong> A unique request identifier.</li>
-    <li><strong>ty (Resource Type):</strong> 4 represents a content instance resource.</li>
-    <li><strong>msgTy (Message Type):</strong> Message Type (String value).</li>
-    <li><strong>pc (Primitive Content):</strong> Contains the actual request data.
-      <ul>
-        <li><strong>m2m:cin:</strong> Represents the &lt;contentInstance&gt; object containing:
-          <ul>
-            <li><strong>lbl:</strong> The labels attached to the &lt;contentInstance&gt; resource in the request.</li>
-            <li><strong>cnf:</strong> It represents the content info attribute of the &lt;contentInstance&gt; resource.</li>
-            <li><strong>con:</strong> The content of the &lt;contentInstance&gt; resource.</li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-    <li><strong>rvi (Release Version Indicator):</strong> Specifies the version of the oneM2M release being used in the request.</li>
-  </ul>
-
-</details>
-
-
-## Schedule Publish
-
-```
-## Payload with Data Types: (Device to Cloud on "SCHCNT" container)
-```
-
-```json
-{
-  "op": 1,
-  "to": "<container-ResourceId>",
-  "fr": "<CRIS-AE-ID>",
-  "rqi": "<unique-Request-Identifier>",
-  "ty": 4,
-  "pc": {
-    "m2m:cin": {
-      "lbl": ["SCHCNT"],
-      "cnf": "irn:sch",
-      "con": {
-        "cmdID": <String value>,
-        "devID": <String value>,
-        "astID": <String value>,
-        "pstID": <String value>,
-        "vndID": <String value>,
-        "appID": <String value>,
-        "ctlTy": <String value>,
-        "astTy": <String value>,
-        "schID": <String value>,
-        "sts": <String value>,
-        "schtY": <String value>,
-        "wkdy": <String value>,
-        "dwkdy": <String value>,
-        "tmpS": <String value>,
-        "tmpE": <String value>
-      }
-    }
-  },
-  "rvi": "3"
-}
-```
-
-```
-## Payload with Sample Values:
-```
-
-```json
-{
-  "op": 1,
-  "to": "<container-ResourceId>",
-  "fr": "<CRIS-AE-ID>",
-  "rqi": "<unique-Request-Identifier>",
-  "ty": 4,
-  "pc": {
-    "m2m:cin": {
-      "lbl": ["SCHCNT"],
-      "cnf": "irn:sch",
-      "con": {
-        "cmdID": "4545455",
-        "devID": "0362500001",
-        "astID": "0360800001",
-        "pstID": "0360100001",
-        "vndID": "11",
-        "appID": "03",
-        "ctlTy": "04",
-        "astTy": "08",
-        "schID": "1",
-        "sts": "0",
-        "schtY": "2",
-        "wkdy": "01111111",
-        "dwkdy": "127",
-        "tmpS": "26102022005135",
-        "tmpE": "26102022075135"
-      }
-    }
-  },
-  "rvi": "3"
-}
-```
-
-<!-- ### Field Descriptions:
-
-- **op (Operation):** 1 signifies a create operation.
-- **to (To):** The target resource, represented by `<container-ResourceId>`.
-- **fr (From):** The originator of the request, represented by `<CRIS-AE-ID>`.
-- **rqi (Request Identifier):** A unique request identifier.
-- **ty (Resource Type):** 4 represents a content instance resource.
-- **msgTy (Message Type):** Message Type (String value).
-- **pc (Primitive Content):** Contains the actual request data.
-  - **m2m:cin:** Represents the `<contentInstance>` object containing:
-    - **lbl:** The labels attached to the `<contentInstance>` resource in the request.
-    - **cnf:** Represents the content info attribute of the `<contentInstance>` resource.
-    - **con:** The content of the `<contentInstance>` resource.
-- **rvi (Release Version Indicator):** Specifies the version of the oneM2M release being used in the request.
--->
-
-<details>
-  <summary><strong>Field Descriptions:</strong></summary>
-
-  <ul>
-    <li><strong>op (Operation):</strong> 1 signifies a create operation.</li>
-    <li><strong>to (To):</strong> The target resource, represented by &lt;container-ResourceId&gt;.</li>
-    <li><strong>fr (From):</strong> The originator of the request, represented by &lt;CRIS-AE-ID&gt;.</li>
-    <li><strong>rqi (Request Identifier):</strong> A unique request identifier.</li>
-    <li><strong>ty (Resource Type):</strong> 4 represents a content instance resource.</li>
-    <li><strong>msgTy (Message Type):</strong> Message Type (String value).</li>
-    <li><strong>pc (Primitive Content):</strong> Contains the actual request data.
-      <ul>
-        <li><strong>m2m:cin:</strong> Represents the &lt;contentInstance&gt; object containing:
-          <ul>
-            <li><strong>lbl:</strong> The labels attached to the &lt;contentInstance&gt; resource in the request.</li>
-            <li><strong>cnf:</strong> It represents the content info attribute of the &lt;contentInstance&gt; resource.</li>
-            <li><strong>con:</strong> The content of the &lt;contentInstance&gt; resource.</li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-    <li><strong>rvi (Release Version Indicator):</strong> Specifies the version of the oneM2M release being used in the request.</li>
-  </ul>
-
-</details>
-
-
-## Reset Schedule
-
-```
-## Payload with Data Types: (Device to Cloud on "CTRLCNT" container)
-```
-
-```json
-{
-  "op": 1,
-  "to": "<container-ResourceId>",
-  "fr": "<CRIS-AE-ID>",
-  "rqi": "<unique-Request-Identifier>",
-  "ty": 4,
-  "pc": {
-    "m2m:cin": {
-      "lbl": ["CTRLCNT"],
-      "cnf": "irn:reSch",
-      "con": {
-        "cmdID": <String value>,
-        "devID": <String value>,
-        "astID": <String value>,
-        "pstID": <String value>,
-        "vndID": <String value>,
-        "appID": <String value>,
-        "ctlTy": <String value>,
-        "astTy": <String value>,
-        "dgt": <String value>,
-        "ctlVal": <String value>
-      }
-    }
-  },
-  "rvi": "3"
-}
-```
-
-```
-## Payload with Sample Values:
-```
-
-```json
-{
-  "op": 1,
-  "to": "<container-ResourceId>",
-  "fr": "<CRIS-AE-ID>",
-  "rqi": "<unique-Request-Identifier>",
-  "ty": 4,
-  "pc": {
-    "m2m:cin": {
-      "lbl": ["CTRLCNT"],
-      "cnf": "irn:reSch",
-      "con": {
-        "cmdID": "343434",
-        "devID": "0362500001",
-        "astID": "0360400001",
-        "pstID": "0360100001",
-        "vndID": "11",
-        "appID": "03",
-        "ctlTy": "05",
-        "astTy": "04",
-        "dgt": "26102022075135",
-        "ctlVal": "1"
-      }
-    }
-  },
-  "rvi": "3"
-}
-```
-
-<!-- ### Field Descriptions:
-
-- **op (Operation):** 1 signifies a create operation.
-- **to (To):** The target resource, represented by `<container-ResourceId>`.
-- **fr (From):** The originator of the request, represented by `<CRIS-AE-ID>`.
-- **rqi (Request Identifier):** A unique request identifier.
-- **ty (Resource Type):** 4 represents a content instance resource.
-- **msgTy (Message Type):** Message Type (String value).
-- **pc (Primitive Content):** Contains the actual request data.
-  - **m2m:cin:** Represents the `<contentInstance>` object containing:
-    - **lbl:** The labels attached to the `<contentInstance>` resource in the request.
-    - **cnf:** Represents the content info attribute of the `<contentInstance>` resource.
-    - **con:** The content of the `<contentInstance>` resource.
-- **rvi (Release Version Indicator):** Specifies the version of the oneM2M release being used in the request.
--->
-
-
-<details>
-  <summary><strong>Field Descriptions:</strong></summary>
-
-  <ul>
-    <li><strong>op (Operation):</strong> 1 signifies a create operation.</li>
-    <li><strong>to (To):</strong> The target resource, represented by &lt;container-ResourceId&gt;.</li>
-    <li><strong>fr (From):</strong> The originator of the request, represented by &lt;CRIS-AE-ID&gt;.</li>
-    <li><strong>rqi (Request Identifier):</strong> A unique request identifier.</li>
-    <li><strong>ty (Resource Type):</strong> 4 represents a content instance resource.</li>
-    <li><strong>msgTy (Message Type):</strong> Message Type (String value).</li>
-    <li><strong>pc (Primitive Content):</strong> Contains the actual request data.
-      <ul>
-        <li><strong>m2m:cin:</strong> Represents the &lt;contentInstance&gt; object containing:
-          <ul>
-            <li><strong>lbl:</strong> The labels attached to the &lt;contentInstance&gt; resource in the request.</li>
-            <li><strong>cnf:</strong> It represents the content info attribute of the &lt;contentInstance&gt; resource.</li>
-            <li><strong>con:</strong> The content of the &lt;contentInstance&gt; resource.</li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-    <li><strong>rvi (Release Version Indicator):</strong> Specifies the version of the oneM2M release being used in the request.</li>
-  </ul>
-
-</details>
-
-
-## Reset Schedule Acknowledgement
-
-```
-## Payload with Data Types: (Device to Cloud on "ACKCNT" container)
-```
-
-```json
-{
-  "op": 1,
-  "to": "<container-ResourceId>",
-  "fr": "<DEVICE-AE-ID>",
-  "rqi": "<unique-Request-Identifier>",
-  "ty": 4,
-  "ot": "<devTm>",
-  "pc": {
-    "m2m:cin": {
-      "lbl": ["ACKCNT"],
-      "cnf": "irn:reSchA",
-      "con": {
-        "cmdID": <String value>,
-        "devID": <String value>,
-        "astID": <String value>,
-        "pstID": <String value>,
-        "vndID": <String value>,
-        "appID": <String value>,
-        "msgTy": <String value>,
-        "astTy": <String value>,
-        "ctlTy": <String value>,
-        "dgt": <String value>,
-        "ackVal": <String value>
-      }
-    }
-  },
-  "rvi": "3"
-}
-```
-
-```
-## Payload with Sample Values:
-```
-
-```json
-{
-  "op": 1,
-  "to": "<container-ResourceId>",
-  "fr": "<DEVICE-AE-ID>",
-  "rqi": "<unique-Request-Identifier>",
-  "ty": 4,
-  "ot": "20141003T112032",
-  "pc": {
-    "m2m:cin": {
-      "lbl": ["ACKCNT"],
-      "cnf": "irn:reSchA",
-      "con": {
-        "cmdID": "343434",
-        "devID": "0362500001",
-        "astID": "0360400001",
-        "pstID": "0360100001",
-        "vndID": "11",
-        "appID": "03",
-        "msgTy": "03",
-        "astTy": "04",
-        "ctlTy": "05",
-        "dgt": "26102022075135",
-        "ackVal": "1"
-      }
-    }
-  },
-  "rvi": "3"
-}
-```
-
-<!-- ### Field Descriptions:
-
-- **op (Operation):** 1 signifies a create operation.
-- **to (To):** The target resource, represented by `<container-ResourceId>`.
-- **fr (From):** The originator of the request, represented by `<DEVICE-AE-ID>`.
-- **rqi (Request Identifier):** A unique request identifier.
-- **ty (Resource Type):** 4 represents a content instance resource.
-- **msgTy (Message Type):** Message Type (String value).
-- **ot (Originating Timestamp):** Current Timestamp of the device when the request is made.
-- **pc (Primitive Content):** Contains the actual request data.
-  - **m2m:cin:** Represents the `<contentInstance>` object containing:
-    - **lbl:** The labels attached to the `<contentInstance>` resource in the request.
-    - **cnf:** Represents the content info attribute of the `<contentInstance>` resource.
-    - **con:** The content of the `<contentInstance>` resource.
-- **rvi (Release Version Indicator):** Specifies the version of the oneM2M release being used in the request.
--->
-
-
-<details>
-  <summary><strong>Field Descriptions:</strong></summary>
-
-  <ul>
-    <li><strong>op (Operation):</strong> 1 signifies a create operation.</li>
-    <li><strong>to (To):</strong> The target resource, represented by &lt;container-ResourceId&gt;.</li>
-    <li><strong>fr (From):</strong> The originator of the request, represented by &lt;DEVICE-AE-ID&gt;.</li>
-    <li><strong>rqi (Request Identifier):</strong> A unique request identifier.</li>
-    <li><strong>ty (Resource Type):</strong> 4 represents a content instance resource.</li>
-    <li><strong>msgTy (Message Type):</strong> Message Type (String value).</li>
-    <li><strong>ot (Originating Timestamp):</strong> The current Timestamp of the device when the request is made.</li>
-    <li><strong>pc (Primitive Content):</strong> Contains the actual request data.
-      <ul>
-        <li><strong>m2m:cin:</strong> Represents the &lt;contentInstance&gt; object containing:
-          <ul>
-            <li><strong>lbl:</strong> The labels attached to the &lt;contentInstance&gt; resource in the request.</li>
-            <li><strong>cnf:</strong> It represents the content info attribute of the &lt;contentInstance&gt; resource.</li>
-            <li><strong>con:</strong> The content of the &lt;contentInstance&gt; resource.</li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-    <li><strong>rvi (Release Version Indicator):</strong> Specifies the version of the oneM2M release being used in the request.</li>
-  </ul>
-
-</details>
-
-
-
-## Get Existing Schedule List
-
-```
-## Payload with Data Types: (Device to Cloud on "CTRLCNT" container)
-```
-
-```json
-{
-  "op": 1,
-  "to": "<container-ResourceId>",
-  "fr": "<CRIS-AE-ID>",
-  "rqi": "<unique-Request-Identifier>",
-  "ty": 4,
-  "msgTy": <String value>,
-  "ot": "",
-  "pc": {
-    "m2m:cin": {
-      "lbl": ["CTRLCNT"],
-      "cnf": "irn:exSchL",
-      "con": {
-        "cmdID": <String value>,
-        "devID": <String value>,
-        "astID": <String value>,
-        "pstID": <String value>,
-        "vndID": <String value>,
-        "appID": <String value>,
-        "astTy": <String value>,
-        "ctlTy": <String value>,
-        "dgt": <String value>,
-        "ctVal": <String value>
-      }
-    }
-  },
-  "rvi": "3"
-}
-```
-
-```
-## Payload with Sample Values:
-```
-
-```json
-{
-  "op": 1,
-  "to": "<container-ResourceId>",
-  "fr": "<CRIS-AE-ID>",
-  "rqi": "<unique-Request-Identifier>",
-  "ty": 4,
-  "msgTy": "04",
-  "ot": "",
-  "pc": {
-    "m2m:cin": {
-      "lbl": ["CTRLCNT"],
-      "cnf": "irn:exSchL",
-      "con": {
-        "cmdID": "335343",
-        "devID": "0362500001",
-        "astID": "0360400001",
-        "pstID": "0360100001",
-        "vndID": "11",
-        "appID": "03",
-        "astTy": "04",
-        "ctlTy": "06",
-        "dgt": "26102022075135",
-        "ctVal": "1"
-      }
-    }
-  },
-  "rvi": "3"
-}
-```
-
-<!-- ### Field Descriptions:
-
-- **op (Operation):** 1 signifies a create operation.
-- **to (To):** The target resource, represented by `<container-ResourceId>`.
-- **fr (From):** The originator of the request, represented by `<CRIS-AE-ID>`.
-- **rqi (Request Identifier):** A unique request identifier.
-- **ty (Resource Type):** 4 represents a content instance resource.
-- **msgTy (Message Type):** Message Type (String value).
-- **ot (Originating Timestamp):** Current Timestamp of the device when the request is made.
-- **pc (Primitive Content):** Contains the actual request data.
-  - **m2m:cin:** Represents the `<contentInstance>` object containing:
-    - **lbl:** The labels attached to the `<contentInstance>` resource in the request.
-    - **cnf:** It represents the content info attribute of the `<contentInstance>` resource.
-    - **con:** The content of the `<contentInstance>` resource.
-- **rvi (Release Version Indicator):** Specifies the version of the oneM2M release being used in the request.
--->
-
-<details>
-  <summary><strong>Field Descriptions:</strong></summary>
-
-  <ul>
-    <li><strong>op (Operation):</strong> 1 signifies a create operation.</li>
-    <li><strong>to (To):</strong> The target resource, represented by &lt;container-ResourceId&gt;.</li>
-    <li><strong>fr (From):</strong> The originator of the request, represented by &lt;DEVICE-AE-ID&gt;.</li>
-    <li><strong>rqi (Request Identifier):</strong> A unique request identifier.</li>
-    <li><strong>ty (Resource Type):</strong> 4 represents a content instance resource.</li>
-    <li><strong>msgTy (Message Type):</strong> Message Type (String value).</li>
-    <li><strong>ot (Originating Timestamp):</strong> The current Timestamp of the device when the request is made.</li>
-    <li><strong>pc (Primitive Content):</strong> Contains the actual request data.
-      <ul>
-        <li><strong>m2m:cin:</strong> Represents the &lt;contentInstance&gt; object containing:
-          <ul>
-            <li><strong>lbl:</strong> The labels attached to the &lt;contentInstance&gt; resource in the request.</li>
-            <li><strong>cnf:</strong> It represents the content info attribute of the &lt;contentInstance&gt; resource.</li>
-            <li><strong>con:</strong> The content of the &lt;contentInstance&gt; resource.</li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-    <li><strong>rvi (Release Version Indicator):</strong> Specifies the version of the oneM2M release being used in the request.</li>
-  </ul>
-
-</details>
-
-
-## Publish Rule
-
-```
-## Payload with Data Types: (Device to Cloud on "RULECNT" container)
-```
-
-```json
-{
-  "op": 1,
-  "to": "<container-ResourceId>",
-  "fr": "<CRIS-AE-ID>",
-  "rqi": "<unique-Request-Identifier>",
-  "ty": 4,
-  "pc": {
-    "m2m:cin": {
-      "lbl": ["RULECNT"],
-      "cnf": "irn:rule",
-      "con": {
-        "cmdID": <String value>,
-        "devID": <String value>,
-        "astID": <String value>,
-        "pstID": <String value>,
-        "vndID": <String value>,
-        "appID": <String value>,
-        "ctlTy": <String value>,
-        "astTy": <String value>,
-        "ruleID": <String value>,
-        "valH": <Decimal value>,
-        "valL": <Decimal value>,
-        "astIDH": <String value>,
-        "actH": <String value>,
-        "astIDL": <String value>,
-        "actL": <String value>
-      }
-    }
-  },
-  "rvi": "3"
-}
-```
-
-```
-## Payload with Sample Values:
-```
-
-```json
-{
-  "op": 1,
-  "to": "<container-ResourceId>",
-  "fr": "<CRIS-AE-ID>",
-  "rqi": "<unique-Request-Identifier>",
-  "ty": 4,
-  "pc": {
-    "m2m:cin": {
-      "lbl": ["RULECNT"],
-      "cnf": "irn:rule",
-      "con": {
-        "cmdID": "67676",
-        "devID": "0362500001",
-        "astID": "0360500001",
-        "pstID": "0360200001",
-        "vndID": "11",
-        "appID": "03",
-        "ctlTy": "07",
-        "astTy": "05",
-        "ruleID": "01",
-        "valH": 300,
-        "valL": 10,
-        "astIDH": "0360100002",
-        "actH": "1",
-        "astIDL": "0360100003",
-        "actL": "0"
-      }
-    }
-  },
-  "rvi": "3"
-}
-```
-<!-- ### Field Descriptions:
-
-- **op (Operation):** 1 signifies a create operation.
-- **to (To):** The target resource, represented by `<container-ResourceId>`.
-- **fr (From):** The originator of the request, represented by `<CRIS-AE-ID>`.
-- **rqi (Request Identifier):** A unique request identifier.
-- **ty (Resource Type):** 4 represents a content instance resource.
-- **msgTy (Message Type):** Message Type (String value).
-- **pc (Primitive Content):** Contains the actual request data.
-  - **m2m:cin:** Represents the `<contentInstance>` object containing:
-    - **lbl:** The labels attached to the `<contentInstance>` resource in the request.
-    - **cnf:** It represents the content info attribute of the `<contentInstance>` resource.
-    - **con:** The content of the `<contentInstance>` resource.
-- **rvi (Release Version Indicator):** Specifies the version of the oneM2M release being used in the request.
--->
-
-<details>
-  <summary><strong>Field Descriptions:</strong></summary>
-
-  <ul>
-    <li><strong>op (Operation):</strong> 1 signifies a create operation.</li>
-    <li><strong>to (To):</strong> The target resource, represented by &lt;container-ResourceId&gt;.</li>
-    <li><strong>fr (From):</strong> The originator of the request, represented by &lt;CRIS-AE-ID&gt;.</li>
-    <li><strong>rqi (Request Identifier):</strong> A unique request identifier.</li>
-    <li><strong>ty (Resource Type):</strong> 4 represents a content instance resource.</li>
-    <li><strong>msgTy (Message Type):</strong> Message Type (String value).</li>
-    <li><strong>pc (Primitive Content):</strong> Contains the actual request data.
-      <ul>
-        <li><strong>m2m:cin:</strong> Represents the &lt;contentInstance&gt; object containing:
-          <ul>
-            <li><strong>lbl:</strong> The labels attached to the &lt;contentInstance&gt; resource in the request.</li>
-            <li><strong>cnf:</strong> It represents the content info attribute of the &lt;contentInstance&gt; resource.</li>
-            <li><strong>con:</strong> The content of the &lt;contentInstance&gt; resource.</li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-    <li><strong>rvi (Release Version Indicator):</strong> Specifies the version of the oneM2M release being used in the request.</li>
-  </ul>
-
-</details>
-
-
-## Rule Executed Response
-
-```
-## Payload with Data Types: (Device to Cloud on "ACKCNT" container)
-```
-
-```json
-{
-  "op": 1,
-  "to": "<container-ResourceId>",
-  "fr": "<DEVICE-AE-ID>",
-  "rqi": "<unique-Request-Identifier>",
-  "ty": 4,
-  "ot": "<devTm>",
-  "pc": {
-    "m2m:cin": {
-      "lbl": ["ACKCNT"],
-      "cnf": "irn:ruleER",
-      "con": {
-        "devID": <String value>,
-        "astID": <String value>,
-        "pstID": <String value>,
-        "vndID": <String value>,
-        "appID": <String value>,
-        "msgTy": <String value>,
-        "astTy": <String value>,
-        "dgt": <String value>,
-        "ruleID": <String value>,
-        "astIDA": <String value>,
-        "acVal": <Decimal value>,
-        "ruOut": <String value>,
-        "act": <String value>
-      }
-    }
-  },
-  "rvi": "3"
-}
-```
-
-```
-## Payload with Sample Values:
-```
-
-```json
-{
-  "op": 1,
-  "to": "<container-ResourceId>",
-  "fr": "<DEVICE-AE-ID>",
-  "rqi": "<unique-Request-Identifier>",
-  "ty": 4,
-  "ot": "20141003T112032",
-  "pc": {
-    "m2m:cin": {
-      "lbl": ["ACKCNT"],
-      "cnf": "irn:ruleER",
-      "con": {
-        "devID": "0362500001",
-        "astID": "0360500001",
-        "pstID": "0360200001",
-        "vndID": "11",
-        "appID": "03",
-        "msgTy": "07",
-        "astTy": "05",
-        "dgt": "26102022075135",
-        "ruleID": "1",
-        "astIDA": "0360100001",
-        "acVal": 100,
-        "ruOut": "1",
-        "act": "1"
-      }
-    }
-  },
-  "rvi": "3"
-}
-```
-
-<!-- ### Field Descriptions:
-
-- **op (Operation):** 1 signifies a create operation.
-- **to (To):** The target resource, represented by `<container-ResourceId>`.
-- **fr (From):** The originator of the request, represented by `<DEVICE-AE-ID>`.
-- **rqi (Request Identifier):** A unique request identifier.
-- **ty (Resource Type):** 4 represents a content instance resource.
-- **msgTy (Message Type):** Message Type (String value).
-- **ot (Originating Timestamp):** The current Timestamp of the device when the request is made.
-- **pc (Primitive Content):** Contains the actual request data.
-  - **m2m:cin:** Represents the `<contentInstance>` object containing:
-    - **lbl:** The labels attached to the `<contentInstance>` resource in the request.
-    - **cnf:** Represents the content info attribute of the `<contentInstance>` resource.
-    - **con:** The content of the `<contentInstance>` resource.
-- **rvi (Release Version Indicator):** Specifies the version of the oneM2M release being used in the request.
--->
-
-<details>
-  <summary><strong>Field Descriptions:</strong></summary>
-
-  <ul>
-    <li><strong>op (Operation):</strong> 1 signifies a create operation.</li>
-    <li><strong>to (To):</strong> The target resource, represented by &lt;container-ResourceId&gt;.</li>
-    <li><strong>fr (From):</strong> The originator of the request, represented by &lt;DEVICE-AE-ID&gt;.</li>
-    <li><strong>rqi (Request Identifier):</strong> A unique request identifier.</li>
-    <li><strong>ty (Resource Type):</strong> 4 represents a content instance resource.</li>
-    <li><strong>msgTy (Message Type):</strong> Message Type (String value).</li>
-    <li><strong>ot (Originating Timestamp):</strong> The current Timestamp of the device when the request is made.</li>
-    <li><strong>pc (Primitive Content):</strong> Contains the actual request data.
-      <ul>
-        <li><strong>m2m:cin:</strong> Represents the &lt;contentInstance&gt; object containing:
-          <ul>
-            <li><strong>lbl:</strong> The labels attached to the &lt;contentInstance&gt; resource in the request.</li>
-            <li><strong>cnf:</strong> It represents the content info attribute of the &lt;contentInstance&gt; resource.</li>
-            <li><strong>con:</strong> The content of the &lt;contentInstance&gt; resource.</li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-    <li><strong>rvi (Release Version Indicator):</strong> Specifies the version of the oneM2M release being used in the request.</li>
-  </ul>
-
-</details>
-
-
-## Reset Rule
-
-```
-## Payload with Data Types: (Device to Cloud on "CTRLCNT" container)
-```
-
-```json
-{
-  "op": 1,
-  "to": "<container-ResourceId>",
-  "fr": "<CRIS-AE-ID>",
-  "rqi": "<unique-Request-Identifier>",
-  "ty": 4,
-  "pc": {
-    "m2m:cin": {
-      "lbl": ["CTRLCNT"],
-      "cnf": "irn:ruleRe",
-      "con": {
-        "cmdID": <String value>,
-        "devID": <String value>,
-        "astID": <String value>,
-        "pstID": <String value>,
-        "vndID": <String value>,
-        "appID": <String value>,
-        "ctlTy": <String value>,
-        "astTy": <String value>,
-        "dgt": <String value>,
-        "ctlVal": <String value>
-      }
-    }
-  },
-  "rvi": "3"
-}
-```
-
-```
-## Payload with Sample Values:
-```
-
-```json
-{
-  "op": 1,
-  "to": "<container-ResourceId>",
-  "fr": "<CRIS-AE-ID>",
-  "rqi": "<unique-Request-Identifier>",
-  "ty": 4,
-  "pc": {
-    "m2m:cin": {
-      "lbl": ["CTRLCNT"],
-      "cnf": "irn:ruleRe",
-      "con": {
-        "cmdID": "64575752",
-        "devID": "0362500001",
-        "astID": "0360500001",
-        "pstID": "0360200001",
-        "vndID": "11",
-        "appID": "03",
-        "ctlTy": "08",
-        "astTy": "05",
-        "dgt": "26102022075135",
-        "ctlVal": "1"
-      }
-    }
-  },
-  "rvi": "3"
-}
-```
-<!-- ### Field Descriptions
-
-- **op (Operation):** 1 signifies a create operation.
-- **to (To):** The target resource, represented by `<container-ResourceId>`.
-- **fr (From):** The originator of the request, represented by `<CRIS-AE-ID>`.
-- **rqi (Request Identifier):** A unique request identifier.
-- **ty (Resource Type):** 4 represents a content instance resource.
-- **msgTy (Message Type):** Message Type (String value).
-- **pc (Primitive Content):** Contains the actual request data.
-  - **m2m:cin:** Represents the `<contentInstance>` object containing:
-    - **lbl:** The labels attached to the `<contentInstance>` resource in the request.
-    - **cnf:** It represents the content info attribute of the `<contentInstance>` resource.
-    - **con:** The content of the `<contentInstance>` resource.
-- **rvi (Release Version Indicator):** Specifies the version of the oneM2M release being used in the request.
--->
-
-<details>
-  <summary><strong>Field Descriptions:</strong></summary>
-
-  <ul>
-    <li><strong>op (Operation):</strong> 1 signifies a create operation.</li>
-    <li><strong>to (To):</strong> The target resource, represented by &lt;container-ResourceId&gt;.</li>
-    <li><strong>fr (From):</strong> The originator of the request, represented by &lt;CRIS-AE-ID&gt;.</li>
-    <li><strong>rqi (Request Identifier):</strong> A unique request identifier.</li>
-    <li><strong>ty (Resource Type):</strong> 4 represents a content instance resource.</li>
-    <li><strong>msgTy (Message Type):</strong> Message Type (String value).</li>
-    <li><strong>pc (Primitive Content):</strong> Contains the actual request data.
-      <ul>
-        <li><strong>m2m:cin:</strong> Represents the &lt;contentInstance&gt; object containing:
-          <ul>
-            <li><strong>lbl:</strong> The labels attached to the &lt;contentInstance&gt; resource in the request.</li>
-            <li><strong>cnf:</strong> It represents the content info attribute of the &lt;contentInstance&gt; resource.</li>
-            <li><strong>con:</strong> The content of the &lt;contentInstance&gt; resource.</li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-    <li><strong>rvi (Release Version Indicator):</strong> Specifies the version of the oneM2M release being used in the request.</li>
-  </ul>
-
-</details>
+## Firmware and Configuration Update Procedure
+
+### Firmware Update Procedure
+
+[![Firmware Update Procedure]][Firmware Update Procedure]  
+[Firmware Update Procedure]: ../../images/firmware_update_procedure.png
+
+The firmware update process involves several sequential steps:  
+
+1. **Firmware Image Upload and Update Request:**  
+   The firmware image is uploaded, and a firmware update request is sent to the device.
+
+2. **Notification for Firmware Update:**  
+   The device receives a notification containing the firmware URL and version details. A sample notification message is shown below:
+
+   ```json
+   {
+     "op": 5,
+     "to": "mqtts://ccsp.m2m.cdot.in/oneM2M/req/CSE001/S0/json",
+     "fr": "/CSE001",
+     "rqi": "d8d6853f-9ac9-4b55-9c65-b782e450544b",
+     "pc": {
+       "m2m:sgn": {
+         "nev": {
+           "rep": {
+             "mad:updFe": {
+               "ty": 28,
+               "ri": "R144297",
+               "pi": "<dmFirmware-Resource-ID>",
+               "ct": "20230816T095204",
+               "lt": "20230816T095204",
+               "rn": "updFe196013",
+               "et": "20230820T103912",
+               "st": 0,
+               "cr": "<>",
+               "cnd": "org.onem2m.management.action.updateFirmware",
+               "cs": 416,
+               "fweCm": "34fdfdfdd",
+               "versn": "2.0",
+               "url": "http://download.com/Beta-Release/2.0"
+             }
+           },
+           "net": 3
+         },
+         "sur": "/CSE001/R144295",
+         "cr": "S0"
+       }
+     },
+     "rvi": "3"
+   }
+   ```
+
+3. **Firmware Checksum Validation:**  
+   Validate the checksum provided in the firmware notification to ensure the integrity of the downloaded firmware.
+
+4. **Firmware Update Process:**  
+   The device downloads the firmware from the provided URL and attempts the update. In case of a failure, the device will roll back to the previous version.
+
+5. **Firmware Update Result Submission:**  
+   The device sends an update result to the CCSP. Below is an example of the `updateFirmware` message sent by the device:
+
+   ```json
+   {
+     "op": 3,
+     "to": "<updateFirmware-Resource-ID>",
+     "fr": "<Device-AE-ID>",
+     "rqi": "<unique-Request-Identifier>",
+     "pc": {
+       "mad:updFe": {
+         "resut": true
+       }
+     },
+     "rvi": "3"
+   }
+   ```
+
+6. **Notifications and Time Synchronization:**  
+   After a successful firmware update, the device sends a Time Sync CI message, followed by various notifications for synchronization with CRIS and CCSP. The device adjusts its time based on the Time Sync Ack Notify message.
+
+
+### Configuration Details Update Procedure
+
+When the configuration file is updated, the process unfolds as follows:  
+
+1. **Configuration Update Notification:**  
+   The device receives a notification message for the updated configuration file, as shown below:
+
+   ```json
+   {
+     "op": 5,
+     "to": "mqtts://ccsp.m2m.cdot.in/oneM2M/req/CSE001/SIRNxyz/json",
+     "fr": "/CSE001",
+     "rqi": "d8d6853f-9ac9-4b55-9c65-b782e450544b",
+     "pc": {
+       "m2m:sgn": {
+         "nev": {
+           "rep": {
+             "mad:updae": {
+               "ty": 28,
+               "ri": "<update-Resource-ID>",
+               "pi": "<dmPackage-Resource-ID>",
+               "ct": "20230816T093524",
+               "lt": "20230816T093524",
+               "rn": "dmPck196002",
+               "et": "20230820T103912",
+               "url": "http://download.com/configFile/2.0",
+               "versn": "2.0",
+               "cnd": "org.onem2m.management.action.update",
+               "acpi": ["R021", "<ACP-ID>"]
+             }
+           },
+           "net": 3
+         },
+         "sur": "/CSE001/R144295",
+         "cr": "S0"
+       }
+     },
+     "rvi": "3"
+   }
+   ```
+
+2. **Processing the Configuration Update:**  
+   The device downloads the updated configuration file from the URL provided in the notification.
+
+3. **Updating Version and URL Details:**  
+   The device updates the configuration version and submits the result to the CCSP. Below is an example of the message sent by the device:
+
+   ```json
+   {
+     "op": 3,
+     "to": "<dmPackage-Resource-ID>",
+     "fr": "<Device-AE-ID>",
+     "rqi": "<unique-Request-Identifier>",
+     "pc": {
+       "mad:dmPae": {
+         "versn": "2.0"
+       }
+     },
+     "rvi": "3"
+   }
+   ```
+
+## Key Notes
+
+??? tip "Key Recommendations for Firmware and Configuration Updates"
+    - **Validate Checksums:** Always ensure the checksum provided in the firmware notification matches the checksum of the downloaded firmware to guarantee integrity.
+    - **Implement Rollback Mechanisms:** Have a robust rollback mechanism in place to handle firmware update failures and restore the previous stable version.
+    - **Ensure Time Synchronization:** After updates, ensure the device synchronizes its time using the Time Sync Ack Notify message to maintain accurate time.

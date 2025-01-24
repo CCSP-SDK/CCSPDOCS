@@ -109,6 +109,8 @@ nav:
         - 'irniyantracMessages/containersAndSubscriptionsPayloads/index.md'
     - IFD Message Payloads: 
         - 'irniyantracMessages/ifdMessagePayloads/index.md'
+    - Cloud/IR-NIYANTRAC Message Payloads:
+        - 'irniyantracMessages/cloudIrniyantracMessagePayloads/index.md'
     - Cloud/IR-NIYANTRAC Notification Payloads:
         - 'irniyantracMessages/cloudIrniyantracNotificationPayloads/index.md'
     - IR-NIYANTRAC Common Errors and Resolution: 
