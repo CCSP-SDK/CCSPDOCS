@@ -734,6 +734,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#onem2m-appid-registration" class="md-nav__link">
+    <span class="md-ellipsis">
+      OneM2M-AppId Registration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#vendor-configuration" class="md-nav__link">
     <span class="md-ellipsis">
       Vendor Configuration
@@ -767,12 +776,45 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="C-DOT Test Infrastructure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pre-testing-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pre-Testing Requirements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vendor-configuration-on-coi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vendor Configuration on COI
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-configuration-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Post-Configuration Steps
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#post-testing-steps" class="md-nav__link">
+  <a href="#onboarding-of-devices-on-production-setup" class="md-nav__link">
     <span class="md-ellipsis">
-      Post-Testing Steps
+      Onboarding of Devices on Production Setup
     </span>
   </a>
   
@@ -796,33 +838,53 @@
 
 <h1 id="vendor-configuration-and-onboarding-process-for-ir-niyantrac">Vendor Configuration and Onboarding Process for IR-NIYANTRAC</h1>
 <hr />
+<h2 id="onem2m-appid-registration">OneM2M-AppId Registration</h2>
+<p>The vendor will register the App-ID in the OneM2M App-ID Registry as <code>Ra1.&lt;vendor_domain&gt;.irn</code>. For more details, visit the <a href="https://www.onem2m.org/using-onem2m/apps-ids-registration" target="_blank">OneM2M App-ID Registry</a>.</p>
+<p>For detailed steps on how to register the App-ID, please refer to the <a href="../oneM2MAppIdRegistration/">OneM2M-AppId Registration page</a>.</p>
+<hr />
 <h2 id="vendor-configuration">Vendor Configuration</h2>
-<p>The vendor on receipt of <strong>Letter of Acceptance (LoA)</strong> from the respective railways shall have to contact the <strong>SSE (Station Engineer)</strong> for its vendor configuration. The vendor shall provide all the details as specified in <strong>Clause 18</strong> of the published <a href="https://drive.google.com/file/d/1AlJyqVTAuHws3nKtmze3yb9llTVZrAXd/view?pli=1" target="_blank">IR-NIYANTRAC Message Format document</a>.</p>
+<p>The vendor on receipt of <strong>Letter of Acceptance (LoA)</strong> from the respective railways shall have to contact the <strong>SSE (Station Engineer)</strong> for its vendor configuration. The vendor shall provide all the details as specified in <strong>Clause 18.2</strong> of the published <a href="https://drive.google.com/file/d/1AlJyqVTAuHws3nKtmze3yb9llTVZrAXd/view?pli=1" target="_blank">IR-NIYANTRAC Message Format document</a>.</p>
 <hr />
 <h2 id="sse-responsibilities">SSE Responsibilities</h2>
 <p>The SSE will be configuring the vendor details on the IR-NIYANTRAC portal. Additionally, the SSE shall configure the <strong>Intelligent Field Devices (IFDs)</strong> and their associated assets for the vendor.</p>
 <p>Once the IFDs and their assets are configured, the SSE shall email the configuration file for the configured IFD to its vendor.</p>
 <hr />
 <h2 id="onboarding-devices">Onboarding Devices</h2>
-<p>The vendors have to proceed with onboarding of their devices on the <strong>production setup</strong> (<a href="https://niyantrac.railsaver.gov.in/IRNIYANTRAC/" target="_blank">ccsp.railsaver.gov.in</a>), after they have completed their testing of the firmware for the IFD on the <strong>test infrastructure</strong> (<a href="https://coi.cdot.in" target="_blank">https://coi.cdot.in</a>).</p>
+<p>The vendors have to proceed with onboarding of their devices on the <strong>production setup</strong> (<a href="https://ccspweb.railsaver.in" target="_blank">ccspweb.railsaver.in</a>), after they have completed their testing of the firmware for the IFD on the <strong>test infrastructure</strong> (<a href="https://coi.cdot.in" target="_blank">https://coi.cdot.in</a>).</p>
 <hr />
 <h2 id="c-dot-test-infrastructure">C-DOT Test Infrastructure</h2>
 <p><strong>C-DOT</strong> provides a test infrastructure for testing IR-NIYANTRAC messages under its <strong>COI initiative</strong> (<a href="https://coi.cdot.in" target="_blank">https://coi.cdot.in</a>).</p>
-<p>For enabling testing on the C-DOT infrastructure, <strong>C-DOT requires an email</strong> from the CRIS IR-NIYANTRAC team. This email includes:
-- Vendor details.
-- Confirmation that the vendor is valid and holds an LoA for the specified area.</p>
-<p>Once the email is received from CRIS by C-DOT:
-1. The vendor will be configured on the <strong>COI infrastructure</strong>.
-2. CRIS will configure the IFD details on the COI for the vendor.
-3. The CRIS team will then email the IFD configuration details to the vendor for their testing.</p>
-<hr />
-<h2 id="post-testing-steps">Post-Testing Steps</h2>
+<h3 id="pre-testing-requirements">Pre-Testing Requirements</h3>
+<p>For enabling testing on the C-DOT infrastructure, <strong>C-DOT requires an email</strong> from the CRIS IR-NIYANTRAC team. This email includes:</p>
+<details class="info" open="open">
+<summary>note</summary>
+<ul>
+<li>All the Vendor details as per the <strong>clause 18.2</strong> of the published <a href="https://drive.google.com/file/d/1AlJyqVTAuHws3nKtmze3yb9llTVZrAXd/view?pli=1" target="_blank">IR-NIYANTRAC Message Format document</a>.</li>
+<li>Confirmation that the vendor is valid and holds an <strong>LoA</strong> for the specified area.</li>
+</ul>
+</details>
+<h3 id="vendor-configuration-on-coi">Vendor Configuration on COI</h3>
+<p>Once the email is received from CRIS by C-DOT:</p>
+<ol>
+<li>The vendor will be configured on the <strong>COI infrastructure</strong>.</li>
+<li>CRIS will configure the IFD details on the COI for the vendor.</li>
+<li>The CRIS team will then email the IFD configuration details to the vendor for their testing.</li>
+</ol>
+<h3 id="post-configuration-steps">Post-Configuration Steps</h3>
 <p>After receiving the configuration details, at a high level, the following steps shall be performed (for detailed flow and understanding, refer to the <a href="https://drive.google.com/file/d/1AlJyqVTAuHws3nKtmze3yb9llTVZrAXd/view?pli=1" target="_blank">IR-NIYANTRAC Message Format document</a>):</p>
 <ol>
-<li>The vendor shall then <strong>generate a certificate</strong> for the IFD as specified in <strong>Clause 16</strong> of the IR-NIYANTRAC Message Format document.</li>
-<li>The vendor’s IFD shall then <strong>create the containers and associated subscriptions</strong> as per <strong>Clause 8</strong> of the IR-NIYANTRAC Message Format document.</li>
-<li>Once the containers and subscriptions data have been created successfully, the vendor’s IFD can then <strong>send field data</strong> for various use cases, such as lifts, water pumps, etc., from the IFD as outlined in <strong>Clause 10</strong>.</li>
+<li>The vendor shall first <strong>generate a SSL certificate</strong> for the IFD as specified in <strong>Clause 16</strong> of the <a href="https://drive.google.com/file/d/1AlJyqVTAuHws3nKtmze3yb9llTVZrAXd/view?pli=1" target="_blank">IR-NIYANTRAC Message Format document</a>.</li>
+<li>The vendor’s IFD shall then <strong>create the containers and associated subscriptions</strong> as per <strong>Clause 8</strong> of the <a href="https://drive.google.com/file/d/1AlJyqVTAuHws3nKtmze3yb9llTVZrAXd/view?pli=1" target="_blank">IR-NIYANTRAC Message Format document</a>.</li>
+<li>Once the containers and subscriptions data have been created successfully, the vendor’s IFD can then <strong>send field data</strong> for various use cases, such as lifts, water pumps, etc., from the IFD as outlined in <strong>Clause 10</strong> of the<a href="https://drive.google.com/file/d/1AlJyqVTAuHws3nKtmze3yb9llTVZrAXd/view?pli=1" target="_blank">IR-NIYANTRAC Message Format document</a>.</li>
 </ol>
+<hr />
+<h2 id="onboarding-of-devices-on-production-setup">Onboarding of Devices on Production Setup</h2>
+<p>After successful completion of testing on the C-DOT test infrastructure, the vendor can proceed to <strong>onboard their devices on the production setup</strong>.<br />
+This process follows a similar approach to the test configuration:</p>
+<ul>
+<li>The vendor must ensure all post-configuration steps (SSL generation, container/subscription creation, data transmission) are repeated on the <strong>production environment</strong>.</li>
+<li>Any production-specific access or setup details shall be coordinated with the CRIS IR-NIYANTRAC team, as per their instructions.</li>
+</ul>
 
 
 
