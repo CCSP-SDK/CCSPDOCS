@@ -5,7 +5,7 @@ The vendor will register the App-ID in the OneM2M App-ID Registry as `Ra1.<vendo
 ---
 
 ## App-ID Registration Process  
-It may take 2 business days for the registration of App-Id in oneM2M, kindly note the App-Id at the time of registration. This App-Id can be mailed as per the clause 18.2 of the <a href="https://drive.google.com/file/d/1AlJyqVTAuHws3nKtmze3yb9llTVZrAXd/view?pli=1" target="_blank">Communication Message Format (as per oneM2M standard) Document</a>
+It may take 2 business days for the registration of App-Id in oneM2M, kindly note the App-Id at the time of registration. This App-Id can be mailed as per the **clause 18.2** of the <a href="https://drive.google.com/file/d/1AlJyqVTAuHws3nKtmze3yb9llTVZrAXd/view?pli=1" target="_blank">Communication Message Format (as per oneM2M standard) Document</a>
 
 ---
 

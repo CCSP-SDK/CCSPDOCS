@@ -25,7 +25,7 @@ The image below shows the resource hierarchy for an IFD (Intelligent Field Devic
 
 <p style="margin-top: 16px;">
   For detailed information on these containers, please refer to <strong>clause 4.0</strong> of the 
-  <a href="https://niyantrac.railsaver.gov.in/IRNIYANTRAC/" target="_blank"><strong>🔗 IR-NIYANTRAC Message Communication Format</strong></a> document.
+  <a href="https://drive.google.com/file/d/1AlJyqVTAuHws3nKtmze3yb9llTVZrAXd/view?pli=1" target="_blank"><strong>🔗 IR-NIYANTRAC Message Communication Format</strong></a> document.
 </p>
 
 ## IR-NIYANTRAC Message Communication Flow 
